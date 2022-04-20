@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <style>
       /*Ajout des polices Roboto et Shrikhand*/
@@ -30,11 +31,106 @@
     </header>
 
     <!-- Contenu de la page -->
-    <main></main>
+    <main>
+      <!--Boutton de Localisation-->
+      <section id="localiser">
+        <button class="localiser--button">
+          <span><i class="fa-solid fa-location-dot locator__icon"></i></span>
+          <span>Paris, Belville</span>
+        </button>
+      </section>
+      <!--Presentation du site -->
+      <section id="presentation">
+        <h1 class="presentation--title">Réservez le menu qui vous convient</h1>
+        <p class="presentation--text">
+          Découvrez des restaurants d'exception, sélectionnés par nos soins.
+        </p>
+        <button class="bigbutton">Explorez nos restaurants</button>
+      </section>
+      <!--Guide d'utilisation-->
+      <section id="guide">
+        <h2>Fonctionnement</h2>
+        <ol class="guide__list">
+          <li class="bull">
+            <span class="bull--numb">1</span>
+            <i class="fa-solid fa-mobile-screen-button bull--icon"></i>
+            <span class="bull--text">Choisissez un restaurant</span>
+          </li>
+          <li class="bull">
+            <span class="bull--numb">2</span>
+            <i class="fa-solid fa-list-ul bull--icon"></i>
+            <span class="bull--text">Composez votre menu</span>
+          </li>
+          <li class="bull">
+            <span class="bull--numb">3</span>
+            <i class="fa-solid fa-store bull--icon"></i>
+            <span class="bull--text">Degustez au restaurant</span>
+          </li>
+        </ol>
+      </section>
+      <!--Presentation des restaurants -->
+      <section id="restaurants">
+        <h2>Restaurants</h2>
+        <div class="stores_list">
+          <div class="card">
+            <img
+              class="card__img"
+              src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+            />
+            <div class="card__text">
+              <div>
+                <h3>La palette du gout</h3>
+                <span> Menilmontant</span>
+              </div>
+              <i class="fa-regular fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              class="card__img"
+              src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+            />
+            <div class="card__text">
+              <div>
+                <h3>La note enchantee</h3>
+                <span> Charone</span>
+              </div>
+              <i class="fa-regular fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              class="card__img"
+              src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+            />
+            <div class="card__text">
+              <div>
+                <h3>A la francaise</h3>
+                <span> Citee Rouge</span>
+              </div>
+              <i class="fa-regular fa-heart heart"></i>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              class="card__img"
+              src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+            />
+            <div class="card__text">
+              <div>
+                <h3>Le delice des sens</h3>
+                <span> Folie-Meliancourt</span>
+              </div>
+              <i class="fa-regular fa-heart heart"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- Pied de la page-->
     <footer>
-      <div class="footer--frame">
+      <div class="footer__framing">
         <img
           src="images/logo/ohmyfood@2x.svg"
           alt="ohmyfood logo svg"
@@ -44,13 +140,13 @@
           <ul>
             <li>
               <p class="footer__li">
-                <i class="fa-solid fa-utensils footer--img"></i> Proposer un
+                <i class="fa-solid fa-utensils footer--icon"></i> Proposer un
                 restaurant
               </p>
             </li>
             <li>
               <p class="footer__li">
-                <i class="fa-solid fa-handshake-angle footer--img"></i> Devenir
+                <i class="fa-solid fa-handshake-angle footer--icon"></i> Devenir
                 partenaire
               </p>
             </li>

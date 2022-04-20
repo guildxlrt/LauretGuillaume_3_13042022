@@ -1,9 +1,10 @@
+/*Colors */
 /* Masterblocs */
 body {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  background-color: #f2f2f1;
+  background-color: #ffffff;
   font-family: "Roboto", sans-serif;
   margin: 0%;
   min-width: 280px;
@@ -15,13 +16,16 @@ header {
   justify-content: center;
   align-content: center;
   width: 100%;
-  margin: 15px 0% 15px 0%;
+  padding: 15px 0% 15px 0%;
+  /*position: sticky; */
+  top: 0px;
+  background-color: #ffffff;
+  box-shadow: 0px 5px 10px #858585;
 }
 
 main {
   flex-direction: column;
   min-height: 500px;
-  background-color: #c7c7c7;
 }
 
 footer {
@@ -40,38 +44,168 @@ footer {
   font-size: 1.5em;
   position: absolute;
   left: 7%;
-  top: 16px;
+  top: 17px;
 }
 #header__arrow:hover {
-  color: #99e2d0;
+  background-color: #99e2d0;
 }
 
 /* Pied de page*/
-.footer--frame {
-  margin: 7%;
+.footer__framing {
+  padding: 7%;
+  /* Cadrage des blocs */
 }
 .footer__logo {
-  width: 100px;
-  height: 20px;
+  min-width: 100px;
+  min-height: 20px;
 }
 .footer__li {
   font-size: 15px;
   color: white;
 }
-.footer--img {
-  margin-right: 7px;
+.footer--icon {
+  margin-right: 10px;
   width: 15px;
 }
 
-/* Elements*/
+/* Pseudo-Elements*/
 a {
   text-decoration: none;
   color: black;
 }
 
-ul {
+ul,
+ol {
   list-style-type: none;
   padding: 0%;
+}
+
+button {
+  border: none;
+}
+
+h1 {
+  font-size: 22px;
+}
+
+/* Buttons */
+.bigbutton {
+  list-style-type: none;
+  background-image: linear-gradient(to right bottom, #ff79da, #9356dc);
+  padding: 20px;
+  margin: 20px 20px 75px 20px;
+  border-radius: 60px;
+  color: white;
+  font-weight: bold;
+  font-size: 17px;
+  box-shadow: 0px 5px 10px #858585;
+}
+
+/* Coeur */
+.heart {
+  font-size: 25px;
+}
+
+.centered_column, .guide__list, #localiser,
+#presentation,
+#howto {
+  /* Center & columning */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* flexbox de la section principale*/
+#localiser {
+  background-color: #eaeaea;
+}
+
+#presentation {
+  background-color: #f6f6f6;
+  justify-content: flex-start;
+}
+
+#guide {
+  background-color: #ffffff;
+  padding: 5%;
+}
+
+#restaurants {
+  background-color: #f6f6f6;
+  padding: 5%;
+}
+
+/* Localisateur */
+.localiser--button {
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #eaeaea;
+  padding: 20px;
+}
+
+/* Presentation */
+.presentation--title {
+  width: fit-content;
+  max-width: 60%;
+  text-align: center;
+}
+.presentation--text {
+  width: fit-content;
+  max-width: 80%;
+  text-align: center;
+}
+
+/* Guide de fonctionnement*/
+.guide__list {
+  margin: 0%;
+}
+
+.bull {
+  width: 95%;
+  max-width: 320px;
+  background-color: #f6f6f6;
+  border-radius: 23px;
+  margin: 15px 0px 15px 0px;
+}
+.bull--numb {
+  padding: 10px 13px 10px 13px;
+  border-radius: 50px;
+  background-color: rgb(0, 102, 255);
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  position: relative;
+  left: -15px;
+}
+.bull--icon {
+  margin: 30px 20px 30px 0px;
+}
+.bull--text {
+  width: fit-content;
+}
+
+/* Presentation des restaurants */
+.stores_list {
+  min-height: 100px;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+.card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px 20px 0px 0px;
+}
+.card__text {
+  padding: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /*# sourceMappingURL=index.css.map */
