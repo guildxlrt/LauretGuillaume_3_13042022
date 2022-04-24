@@ -67,7 +67,7 @@ footer {
   }
   &__arrow {
     font-style: normal;
-    font-size: 1.5em;
+    font-size: 24px;
     position: absolute;
     left: 7%;
     top: 17px;
@@ -84,8 +84,7 @@ footer {
     padding: 7%; /* Cadrage des blocs */
   }
   &__logo {
-    min-width: 100px;
-    min-height: 20px;
+    width: 166px;
   }
   &__li {
     font-size: 15px;
@@ -136,4 +135,27 @@ h1 {
 
 .heart {
   font-size: 25px;
+}
+
+/* RESPONSIVE*/
+
+@media all and (min-width: 768px) {
+  #header {
+    &__logo {
+      width: 268px;
+    }
+    &__arrow {
+      font-style: normal;
+      font-size: 36px;
+    }
+  }
+
+  .footer {
+    &__logo {
+      width: 208px;
+    }
+    &__li {
+      font-size: 19px;
+    }
+  }
 }
