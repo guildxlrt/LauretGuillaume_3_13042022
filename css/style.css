@@ -47,7 +47,7 @@ footer {
   top: 17px;
 }
 #header__arrow:hover {
-  background-color: #99e2d0;
+  color: #99e2d0;
 }
 
 /* Pied de page*/
@@ -92,7 +92,7 @@ h1 {
   list-style-type: none;
   background-image: linear-gradient(to right bottom, #ff79da, #9356dc);
   padding: 20px;
-  margin: 20px 20px 75px 20px;
+  margin: 20px 20px 55px 20px;
   border-radius: 60px;
   color: white;
   font-weight: bold;

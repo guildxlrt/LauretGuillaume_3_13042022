@@ -47,7 +47,7 @@ footer {
   top: 17px;
 }
 #header__arrow:hover {
-  background-color: #99e2d0;
+  color: #99e2d0;
 }
 
 /* Pied de page*/
@@ -92,7 +92,7 @@ h1 {
   list-style-type: none;
   background-image: linear-gradient(to right bottom, #ff79da, #9356dc);
   padding: 20px;
-  margin: 20px 20px 75px 20px;
+  margin: 20px 20px 55px 20px;
   border-radius: 60px;
   color: white;
   font-weight: bold;
@@ -212,12 +212,11 @@ h1 {
   background-color: #ffffff;
   border-radius: 20px;
   margin: 3%;
-  /* max-width: 450px; */
   width: 100%;
+  box-shadow: 0px 5px 10px #858585;
 }
 .card__img {
-  max-width: inherit;
-  width: inherit;
+  width: 100%;
   height: 200px;
   object-fit: cover;
   border-radius: 20px 20px 0px 0px;
@@ -284,6 +283,18 @@ h1 {
   .page_titles {
     text-align: center;
   }
+
+  #guide,
+#restaurants {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .guide__list,
+.stores_list {
+    width: 100%;
+  }
 }
 @media all and (min-width: 768px) and (min-width: 768px) and (max-width: 991px) {
   .stores_list {
@@ -298,10 +309,18 @@ h1 {
     margin-left: 0px;
     margin-right: 0px;
   }
+  .card__img {
+    width: 100%;
+  }
 }
 @media all and (min-width: 768px) and (min-width: 992px) {
   .guide__list {
     justify-content: space-evenly;
+    max-width: 1200px;
+  }
+
+  .bull {
+    width: 250px;
   }
 
   .stores_list {
