@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/menu.css" />
+    <style>
+      /*Ajout des polices Roboto et Shrikhand*/
+      @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+    </style>
+    <!-- importation de awesome fonts -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <title>La Note Enchantee</title>
+  </head>
+
+  <body>
+    <!-- Entete de la page -->
+    <header>
+      <a href="../index.html">
+        <i class="fa-solid fa-arrow-left header__arrow"></i>
+      </a>
+      <img
+        src="../images/logo/ohmyfood.png"
+        alt="ohmyfood logo"
+        class="header__logo"
+      />
+    </header>
+
+    <!-- Contenu de la page -->
+    <main>
+      <!-- Titre de la page-->
+      <section
+        id="title"
+        style="
+          background-image: url('../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg');
+          background-size: cover;
+          background-position: center;
+        "
+      >
+        <div class="title--frame"></div>
+        <div class="title__text">
+          <h1>La Note Enchantee</h1>
+          <i class="fa-regular fa-heart heart"></i>
+        </div>
+      </section>
+
+      <!-- Menu-->
+      <section id="menu">
+        <!-- Entrees -->
+        <div id="entrees">
+          <h2>Entrees</h2>
+          <ul class="list">
+            <!--un_plat-->
+            <li class="plate">
+              <div class="plate__text">
+                <h3>Ravioles de foie gras</h3>
+                <span>Accompagnés de leur crème à la truffe </span>
+              </div>
+              <span class="plate__price">25€</span>
+              <div class="plate__check">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+            </li>
+            <!--un_plat-->
+            <li class="plate">
+              <div class="plate__text">
+                <h3>Caviar osciètre</h3>
+                <span>Sur blini à la farine de blé noir </span>
+              </div>
+              <span class="plate__price">20€</span>
+              <div class="plate__check">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+            </li>
+            <!--un_plat-->
+            <li class="plate">
+              <div class="plate__text">
+                <h3>Foie gras de canard cuit entier</h3>
+                <span>Confiture de figue et pain toasté </span>
+              </div>
+              <span class="plate__price">35€</span>
+              <div class="plate__check">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- Plats principaux -->
+        <div id="plats-princip">
+          <h2>Plats</h2>
+          <ul class="list">
+            <!--un_plat-->
+            <li class="plate">
+              <div class="plate__text">
+                <h3>Noix de coquilles Saint-Jacques</h3>
+                <span>Sur lit de purée de céleri-rave </span>
+              </div>
+              <span class="plate__price">40€</span>
+              <div class="plate__check">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+            </li>
+            <!--un_plat-->
+            <li class="plate">
+              <div class="plate__text">
+                <h3>Langoustine poêlée</h3>
+                <span>Purée de patate douce </span>
+              </div>
+              <span class="plate__price">35€</span>
+              <div class="plate__check">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+            </li>
+            <!--un_plat-->
+            <li class="plate">
+              <div class="plate__text">
+                <h3>Mijoté de queue de boeuf</h3>
+                <span>Et riz sauvage aux zestes de citron </span>
+              </div>
+              <span class="plate__price">44€</span>
+              <div class="plate__check">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- Deserts -->
+        <div id="deserts">
+          <h2>Deserts</h2>
+          <ul class="list">
+            <!--un_plat-->
+            <li class="plate">
+              <div class="plate__text">
+                <h3>Macaron noisette et chocolat</h3>
+                <span>Glace au caramel brun et sel de Guérande </span>
+              </div>
+              <span class="plate__price">18€</span>
+              <div class="plate__check">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+            </li>
+            <!--un_plat-->
+            <li class="plate">
+              <div class="plate__text">
+                <h3>Baba au rhum revisité</h3>
+                <span>Avec son coulis de citron</span>
+              </div>
+              <span class="plate__price">22€</span>
+              <div class="plate__check">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+            </li>
+            <!--un_plat-->
+            <li class="plate">
+              <div class="plate__text">
+                <h3>Tarte au citron meringuée</h3>
+                <span>Déstructurée</span>
+              </div>
+              <span class="plate__price">23€</span>
+              <div class="plate__check">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <a href="#restaurants" class="bigbutton">Commander</a>
+      </section>
+    </main>
+
+    <!-- Pied de la page-->
+    <footer>
+      <div class="footer__framing">
+        <img
+          src="../images/logo/ohmyfood@2x.svg"
+          alt="ohmyfood logo svg"
+          class="footer__logo"
+        />
+        <div>
+          <ul>
+            <li>
+              <a href="#">
+                <p class="footer__li">
+                  <i class="fa-solid fa-utensils footer--icon"></i> Proposer un
+                  restaurant
+                </p>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <p class="footer__li">
+                  <i class="fa-solid fa-handshake-angle footer--icon"></i>
+                  Devenir partenaire
+                </p>
+              </a>
+            </li>
+
+            <li>
+              <a href="#"><p class="footer__li">Mentions legales</p></a>
+            </li>
+            <li>
+              <a href="#"><p class="footer__li">Contacts</p></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

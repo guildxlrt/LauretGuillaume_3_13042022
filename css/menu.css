@@ -1,4 +1,7 @@
+/* MIXINS*/
 /*Colors */
+/*background-colors */
+/* BLOCKS*/
 /* Masterblocs */
 body {
   display: flex;
@@ -8,6 +11,7 @@ body {
   font-family: "Roboto", sans-serif;
   margin: 0%;
   min-width: 280px;
+  z-index: 0;
 }
 
 header {
@@ -17,10 +21,11 @@ header {
   align-content: center;
   width: 100%;
   padding: 15px 0% 15px 0%;
-  /*position: sticky; */
+  position: sticky;
   top: 0px;
   background-color: #ffffff;
-  box-shadow: 0px 5px 10px #858585;
+  box-shadow: 0px 0px 10px #858585;
+  z-index: 3;
 }
 
 main {
@@ -35,19 +40,24 @@ footer {
 }
 
 /*Pied de page*/
-#header__logo {
+.header__logo {
   object-fit: cover;
   width: 179px;
 }
-#header__arrow {
+.header__arrow {
   font-style: normal;
   font-size: 24px;
   position: absolute;
   left: 7%;
   top: 17px;
 }
-#header__arrow:hover {
+.header__arrow:hover {
   color: #99e2d0;
+}
+
+/* Enlever la fleche*/
+#no_arrow {
+  display: none;
 }
 
 /* Pied de page*/
@@ -137,12 +147,15 @@ h1 {
   position: relative;
   bottom: -2px;
 }
-.title__text--style {
-  font-family: "Shrikhand", cursive;
-}
 
 main {
   background-color: #f6f6f6;
+}
+
+h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 30px;
+  font-stretch: expanded;
 }
 
 h3 {
@@ -164,9 +177,10 @@ h2 {
 }
 
 #entrees,
-#plats,
+#plats-princip,
 #deserts {
   width: 90%;
+  max-width: 400px;
 }
 
 .list {
@@ -185,7 +199,7 @@ h2 {
   width: 100%;
   height: 70px;
   border-radius: 15px;
-  box-shadow: 0px 5px 10px #858585;
+  box-shadow: 0px 0px 10px #858585;
 }
 .plate__text {
   width: 100%;
@@ -213,6 +227,22 @@ h2 {
   font-size: 20px;
 }
 
+/* boutton*/
+.bigbutton {
+  font-stretch: expanded;
+  margin-bottom: 300px;
+}
+
+/* RESPONSIVE*/
+/*
+@media all and (min-width: 768px) {
+  #entrees,
+  #plats-princip,
+  #deserts {
+    width: 100%;
+    max-width: 400px;
+  }
+}*/
 @media all and (min-width: 768px) and (max-width: 991px) {
   .title--frame {
     height: 400px;

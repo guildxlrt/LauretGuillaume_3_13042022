@@ -1,3 +1,5 @@
+/* MIXINS*/
+
 /*Colors */
 
 @mixin primary-color {
@@ -10,6 +12,8 @@
   background-color: #99e2d0;
 }
 
+/*background-colors */
+
 @mixin back-grey {
   background-color: #f6f6f6;
 }
@@ -19,9 +23,12 @@
 @mixin back-dark {
   background-color: #eaeaea;
 }
+
 @mixin shadow {
-  box-shadow: 0px 5px 10px #858585;
+  box-shadow: 0px 0px 10px #858585;
 }
+
+/* BLOCKS*/
 
 /* Masterblocs */
 
@@ -33,6 +40,7 @@ body {
   font-family: "Roboto", sans-serif;
   margin: 0%;
   min-width: 280px;
+  z-index: 0;
 }
 
 header {
@@ -42,10 +50,11 @@ header {
   align-content: center;
   width: 100%;
   padding: 15px 0% 15px 0%;
-  /*position: sticky; */
+  position: sticky;
   top: 0px;
   @include back-light;
   @include shadow;
+  z-index: 3;
 }
 
 main {
@@ -63,7 +72,7 @@ footer {
 
 /*Pied de page*/
 
-#header {
+.header {
   &__logo {
     object-fit: cover;
     width: 179px;
@@ -78,6 +87,11 @@ footer {
       color: #99e2d0;
     }
   }
+}
+
+/* Enlever la fleche*/
+#no_arrow {
+  display: none;
 }
 
 /* Pied de page*/
@@ -131,7 +145,7 @@ h1 {
   color: white;
   font-weight: bold;
   font-size: 17px;
-  @include shadow;
+  box-shadow: 0px 5px 10px #858585;
 }
 
 /* Coeur */

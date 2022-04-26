@@ -1,4 +1,7 @@
+/* MIXINS*/
 /*Colors */
+/*background-colors */
+/* BLOCKS*/
 /* Masterblocs */
 body {
   display: flex;
@@ -8,6 +11,7 @@ body {
   font-family: "Roboto", sans-serif;
   margin: 0%;
   min-width: 280px;
+  z-index: 0;
 }
 
 header {
@@ -17,10 +21,11 @@ header {
   align-content: center;
   width: 100%;
   padding: 15px 0% 15px 0%;
-  /*position: sticky; */
+  position: sticky;
   top: 0px;
   background-color: #ffffff;
-  box-shadow: 0px 5px 10px #858585;
+  box-shadow: 0px 0px 10px #858585;
+  z-index: 3;
 }
 
 main {
@@ -35,19 +40,24 @@ footer {
 }
 
 /*Pied de page*/
-#header__logo {
+.header__logo {
   object-fit: cover;
   width: 179px;
 }
-#header__arrow {
+.header__arrow {
   font-style: normal;
   font-size: 24px;
   position: absolute;
   left: 7%;
   top: 17px;
 }
-#header__arrow:hover {
+.header__arrow:hover {
   color: #99e2d0;
+}
+
+/* Enlever la fleche*/
+#no_arrow {
+  display: none;
 }
 
 /* Pied de page*/
@@ -213,7 +223,7 @@ h1 {
   border-radius: 20px;
   margin: 3%;
   width: 100%;
-  box-shadow: 0px 5px 10px #858585;
+  box-shadow: 0px 0px 10px #858585;
 }
 .card__img {
   width: 100%;
@@ -222,11 +232,15 @@ h1 {
   border-radius: 20px 20px 0px 0px;
 }
 .card__text {
-  padding: 5%;
+  padding: 2% 5% 3% 5%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+h3 {
+  margin: 0px;
 }
 
 @media all and (min-width: 768px) {
@@ -260,6 +274,7 @@ h1 {
     font-size: 18px;
     padding-left: 15px;
     padding-right: 15px;
+    z-index: 1;
   }
   .bull--icon {
     margin: 0px 0px 0px 0px;
@@ -278,6 +293,8 @@ h1 {
   .page_titles {
     text-align: left;
   }
+
+  /*RESPONSIVE*/
 }
 @media all and (min-width: 768px) and (min-width: 768px) {
   .page_titles {
@@ -300,7 +317,7 @@ h1 {
   .stores_list {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
 
   .card {

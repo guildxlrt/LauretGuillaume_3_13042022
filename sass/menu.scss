@@ -15,15 +15,17 @@
     padding: 0% 10% 0% 10%;
     position: relative;
     bottom: -2px;
-
-    &--style {
-      font-family: "Shrikhand", cursive;
-    }
   }
 }
 
 main {
   @include back-grey;
+}
+
+h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 30px;
+  font-stretch: expanded;
 }
 
 h3 {
@@ -48,9 +50,10 @@ $plate_height: 70px;
 }
 
 #entrees,
-#plats,
+#plats-princip,
 #deserts {
   width: 90%;
+  max-width: 400px;
 }
 
 .list {
@@ -97,6 +100,24 @@ $plate_height: 70px;
     font-size: 20px;
   }
 }
+
+/* boutton*/
+.bigbutton {
+  font-stretch: expanded;
+  margin-bottom: 300px;
+}
+
+/* RESPONSIVE*/
+
+/*
+@media all and (min-width: 768px) {
+  #entrees,
+  #plats-princip,
+  #deserts {
+    width: 100%;
+    max-width: 400px;
+  }
+}*/
 
 @media all and (min-width: 768px) and (max-width: 991px) {
   .title--frame {
