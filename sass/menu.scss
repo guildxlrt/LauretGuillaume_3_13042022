@@ -119,14 +119,29 @@ $plate_height: 70px;
   }
 }*/
 
+@media all and (min-width: 768px) {
+  .title {
+    &__text {
+      justify-content: space-evenly;
+    }
+  }
+}
+
 @media all and (min-width: 768px) and (max-width: 991px) {
-  .title--frame {
-    height: 400px;
+  .title {
+    &--frame {
+      height: 400px;
+    }
+    &__text {
+      justify-content: space-evenly;
+    }
   }
 }
 
 @media all and (min-width: 992px) {
-  .title--frame {
-    height: 600px;
+  .title {
+    &--frame {
+      height: 600px;
+    }
   }
 }
