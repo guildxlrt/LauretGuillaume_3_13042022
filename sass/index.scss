@@ -75,7 +75,7 @@
   &--numb {
     padding: 10px 13px 10px 13px;
     border-radius: 50px;
-    background-color: rgb(0, 102, 255);
+    @include numb-color;
     color: white;
     font-size: 10px;
     font-weight: bold;

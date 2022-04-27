@@ -3,7 +3,7 @@
 .title {
   &--frame {
     width: 100%;
-    height: 200px;
+    height: 325px;
   }
   &__text {
     @include back-grey;
@@ -30,17 +30,13 @@ h1 {
 
 h3 {
   font-size: 18px;
-  margin: 0px;
 }
 
 h2 {
   font-weight: normal;
-  border-bottom: 3px solid #99e2d0;
+  border-bottom: 3px solid $tertiary-color;
   width: fit-content;
 }
-
-$plate_border: 15px;
-$plate_height: 70px;
 
 #menu {
   display: flex;
@@ -53,7 +49,7 @@ $plate_height: 70px;
 #plats-princip,
 #deserts {
   width: 90%;
-  max-width: 400px;
+  max-width: 475px;
 }
 
 .list {
@@ -61,61 +57,104 @@ $plate_height: 70px;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 250px;
+  height: 100%;
 }
+
+/* Plate variables*/
+$plate_border: 15px;
+$plate_height: 70px;
+$plate_margin: 10px;
 
 .plate {
   display: flex;
   flex-direction: row;
+  justify-content: stretch;
   align-items: center;
   background-color: white;
   width: 100%;
   height: $plate_height;
+  margin-top: $plate_margin;
+  margin-bottom: $plate_margin;
   border-radius: $plate_border;
   @include shadow;
 
+  position: relative;
+  overflow: hidden;
+
   &__text {
-    width: 100%;
+    width: 70%;
     height: 100%;
     padding: 0% 5% 0% 5%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+
+    &--lines {
+      display: flex;
+      margin: 0px;
+      max-height: 21px;
+
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
   }
   &__price {
     padding: 0px 20px 0px 20px;
     font-size: 16px;
     font-weight: bold;
   }
-  &__check {
-    @include tertiary-color;
-    padding: 0px 20px 0px 20px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: $plate_height;
-    border-radius: 0px $plate_border $plate_border 0px;
-    font-size: 20px;
+
+  &__anim {
+    &--bg {
+      @include tertiary-bg-color;
+      padding: 0px 20px 0px 20px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: $plate_height;
+      border-radius: 0px $plate_border $plate_border 0px;
+      font-size: 20px;
+
+      transition: transform 1000ms ease-in-out;
+
+      position: absolute;
+      right: -60px;
+    }
 
     &--icon {
+      transition: transform 1000ms ease-in-out;
+    }
+
+    &--bloc {
+      width: 0px;
+      height: 70px;
     }
   }
 
   &:hover {
-    & .plate__check {
+    & .plate__anim {
+      &--bloc {
+        animation: plt-check-blk-width 1000ms;
+        width: 70px;
+      }
+      &--bg {
+        transform: translateX(-60px);
+      }
       &--icon {
+        transform: rotate(360deg);
       }
     }
   }
 }
 
-@keyframes plate-checked {
+@keyframes plt-check-blk-width {
   0% {
+    width: 0px;
   }
-
   100% {
+    width: 70px;
   }
 }
 
@@ -126,16 +165,6 @@ $plate_height: 70px;
 }
 
 /* RESPONSIVE*/
-
-/*
-@media all and (min-width: 768px) {
-  #entrees,
-  #plats-princip,
-  #deserts {
-    width: 100%;
-    max-width: 400px;
-  }
-}*/
 
 @media all and (min-width: 768px) {
   .title {
@@ -148,7 +177,7 @@ $plate_height: 70px;
 @media all and (min-width: 768px) and (max-width: 991px) {
   .title {
     &--frame {
-      height: 400px;
+      height: 450px;
     }
     &__text {
       justify-content: space-evenly;
