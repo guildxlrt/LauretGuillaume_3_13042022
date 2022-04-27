@@ -98,6 +98,24 @@ $plate_height: 70px;
     height: $plate_height;
     border-radius: 0px $plate_border $plate_border 0px;
     font-size: 20px;
+
+    &--icon {
+    }
+  }
+
+  &:hover {
+    & .plate__check {
+      &--icon {
+      }
+    }
+  }
+}
+
+@keyframes plate-checked {
+  0% {
+  }
+
+  100% {
   }
 }
 
