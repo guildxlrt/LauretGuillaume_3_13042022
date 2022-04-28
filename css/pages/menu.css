@@ -1,57 +1,43 @@
 /* MIXINS*/
-/*Bckground colors */
-/*Ombress */
-/*LOADER*/
-/*loader screen*/
-.loader {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  background-color: #f6f6f6;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 3;
+/*couleurs de fond de page*/
+/*couleur principales utilisees en fond d'element*/
+/*Ombres */
+/*loader font shadow*/
+/*Couleurs */
+/* Plate variables*/
+/*Loader spin*/
+/* Carte de presentation*/
+/*Width du block du ckecker du Menu Plate*/
+@keyframes plt-check-blk-width {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 70px;
+  }
 }
-.loader--hidden {
-  opacity: 0;
-  visibility: hidden;
+/* animation du coeur */
+@keyframes heart-grow {
+  0% {
+    transform: scale(0);
+  }
+  7% {
+    transform: scale(0.34);
+  }
+  24% {
+    transform: scale(0.68);
+  }
+  34% {
+    transform: scale(0.82);
+  }
+  57% {
+    transform: scale(1.38);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
-
-/*loader spin*/
-.spinner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 175px;
-  width: 175px;
-  border: 8px solid #ff79da;
-  border-radius: 50%;
-  position: relative;
-  box-shadow: 0px 0px 5px #ff79da;
-  /*Font properties*/
-}
-.spinner:after {
-  content: "";
-  height: 175px;
-  width: 175px;
-  border-radius: 50%;
-  border: 8px solid transparent;
-  border-top-color: #9356dc;
-  position: absolute;
-  top: -8px;
-  left: -8px;
-  animation: spin 2.2s cubic-bezier(0.94, 0.32, 0.25, 0.83) 0s infinite;
-}
-.spinner__text {
-  font-family: "Shrikhand", cursive;
-  font-size: 25px;
-  text-align: center;
-  text-shadow: 0px 5px 10px #929292;
-}
-
+/* animation du spinner */
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -61,15 +47,171 @@
   }
 }
 /* MIXINS*/
-/*Bckground colors */
-/*Ombress */
+/*couleurs de fond de page*/
+/*couleur principales utilisees en fond d'element*/
+/*Ombres */
+/*loader font shadow*/
+/*Couleurs */
+/* Plate variables*/
+/*Loader spin*/
+/* Carte de presentation*/
+/*Width du block du ckecker du Menu Plate*/
+@keyframes plt-check-blk-width {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 70px;
+  }
+}
+/* animation du coeur */
+@keyframes heart-grow {
+  0% {
+    transform: scale(0);
+  }
+  7% {
+    transform: scale(0.34);
+  }
+  24% {
+    transform: scale(0.68);
+  }
+  34% {
+    transform: scale(0.82);
+  }
+  57% {
+    transform: scale(1.38);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* animation du spinner */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Buttons */
+.btn {
+  background: linear-gradient(to right bottom, #ff79da, #9356dc);
+  box-shadow: 0px 5px 10px #858585;
+  list-style-type: none;
+  padding: 20px;
+  margin: 20px 20px 55px 20px;
+  border-radius: 60px;
+  color: white;
+  font-weight: bold;
+  font-size: 17px;
+  position: relative;
+  z-index: 1;
+}
+.btn:hover::after {
+  opacity: 1;
+}
+.btn::after {
+  /*color modification*/
+  background: linear-gradient(to right bottom, #ff88de, #9b63df);
+  box-shadow: 0px 5px 10px #393939;
+  /*position*/
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  /*presets*/
+  content: "";
+  opacity: 0;
+  border-radius: 60px;
+  transition: opacity 250ms;
+}
+
+/* MIXINS*/
+/*couleurs de fond de page*/
+/*couleur principales utilisees en fond d'element*/
+/*Ombres */
+/*loader font shadow*/
+/*Couleurs */
+/* Plate variables*/
+/*Loader spin*/
+/* Carte de presentation*/
+/*Width du block du ckecker du Menu Plate*/
+@keyframes plt-check-blk-width {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 70px;
+  }
+}
+/* animation du coeur */
+@keyframes heart-grow {
+  0% {
+    transform: scale(0);
+  }
+  7% {
+    transform: scale(0.34);
+  }
+  24% {
+    transform: scale(0.68);
+  }
+  34% {
+    transform: scale(0.82);
+  }
+  57% {
+    transform: scale(1.38);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* animation du spinner */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Coeur */
+.heart {
+  font-size: 25px;
+}
+.heart__empty {
+  color: black;
+  position: relative;
+  z-index: 0;
+}
+.heart__empty:active {
+  color: transparent;
+}
+.heart__full {
+  color: transparent;
+  /*position*/
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+.heart__full:active {
+  color: #9356dc;
+  text-shadow: 0px 0px 6px rgba(255, 121, 217, 0.5019607843);
+  animation: heart-grow 550ms;
+}
+
 /* BLOCKS*/
-/* Masterblocs */
+/* Blocs principaux */
 body {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  background-color: #ffffff;
+  background-color: #f2f2f2;
   font-family: "Roboto", sans-serif;
   margin: 0%;
   min-width: 280px;
@@ -85,14 +227,13 @@ header {
   padding: 15px 0% 15px 0%;
   position: sticky;
   top: 0px;
-  background-color: #ffffff;
+  background-color: #f2f2f2;
   box-shadow: 0px 3px 10px #858585;
   z-index: 2;
 }
 
 main {
   flex-direction: column;
-  min-height: 500px;
 }
 
 footer {
@@ -159,89 +300,6 @@ h1 {
   font-size: 22px;
 }
 
-/* Buttons */
-.btn {
-  background: linear-gradient(to right bottom, #ff79da, #9356dc);
-  box-shadow: 0px 5px 10px #858585;
-  list-style-type: none;
-  padding: 20px;
-  margin: 20px 20px 55px 20px;
-  border-radius: 60px;
-  color: white;
-  font-weight: bold;
-  font-size: 17px;
-  position: relative;
-  z-index: 1;
-}
-.btn:hover::after {
-  opacity: 1;
-}
-.btn::after {
-  /*color modification*/
-  background: linear-gradient(to right bottom, #ff88de, #9b63df);
-  box-shadow: 0px 5px 10px #393939;
-  /*position*/
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  z-index: -1;
-  /*presets*/
-  content: "";
-  opacity: 0;
-  border-radius: 60px;
-  transition: opacity 250ms;
-}
-
-/* Coeur */
-.heart {
-  font-size: 25px;
-}
-.heart__empty {
-  color: black;
-  position: relative;
-  z-index: 0;
-}
-.heart__empty:active {
-  color: transparent;
-}
-.heart__full {
-  color: transparent;
-  /*position*/
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  z-index: 1;
-}
-.heart__full:active {
-  color: #9356dc;
-  text-shadow: 0px 6px 10px rgba(133, 133, 133, 0.6784313725);
-  animation: heart-grow 550ms;
-}
-
-@keyframes heart-grow {
-  0% {
-    transform: scale(0);
-  }
-  7% {
-    transform: scale(0.34);
-  }
-  24% {
-    transform: scale(0.68);
-  }
-  34% {
-    transform: scale(0.82);
-  }
-  57% {
-    transform: scale(1.38);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 /* RESPONSIVE*/
 @media all and (min-width: 768px) {
   #header__logo {
@@ -264,7 +322,7 @@ h1 {
   height: 325px;
 }
 .title__text {
-  background-color: #f6f6f6;
+  background-color: #eaeaea;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -276,7 +334,7 @@ h1 {
 }
 
 main {
-  background-color: #f6f6f6;
+  background-color: #eaeaea;
 }
 
 h1 {
@@ -295,6 +353,7 @@ h2 {
   width: fit-content;
 }
 
+/* Blocs de mise en page*/
 #menu {
   display: flex;
   flex-direction: column;
@@ -317,13 +376,13 @@ h2 {
   height: 100%;
 }
 
-/* Plate variables*/
+/*Assiette*/
 .plate {
   display: flex;
   flex-direction: row;
   justify-content: stretch;
   align-items: center;
-  background-color: white;
+  background-color: #f2f2f2;
   width: 100%;
   height: 70px;
   margin-top: 10px;
@@ -384,20 +443,6 @@ h2 {
 }
 .plate:hover .plate__anim--icon {
   transform: rotate(360deg);
-}
-
-@keyframes plt-check-blk-width {
-  0% {
-    width: 0px;
-  }
-  100% {
-    width: 70px;
-  }
-}
-/* boutton*/
-.bigbutton {
-  font-stretch: expanded;
-  margin-bottom: 300px;
 }
 
 /* RESPONSIVE*/

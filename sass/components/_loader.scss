@@ -1,39 +1,6 @@
-/* MIXINS*/
-
-/*Bckground colors */
-
-$primary-color: #9356dc;
-$secondary-color: #ff79da;
-$tertiary-color: #99e2d0;
-
-@mixin primary-bg-color {
-  background-color: #9356dc;
-}
-@mixin secondary-bg-color {
-  background-color: #ff79da;
-}
-@mixin tertiary-bg-color {
-  background-color: #99e2d0;
-}
-@mixin footer-bg-color {
-  background-color: #39383a;
-}
-
-@mixin back-grey {
-  background-color: #f6f6f6;
-}
-@mixin back-light {
-  background-color: #ffffff;
-}
-@mixin back-dark {
-  background-color: #eaeaea;
-}
-
-/*Ombress */
-
-@mixin shadow {
-  box-shadow: 0px 0px 10px #858585;
-}
+@import "../utils/_mixins.scss";
+@import "../utils/_var.scss";
+@import "../utils/_keyframes.scss";
 
 /*LOADER*/
 
@@ -58,8 +25,6 @@ $tertiary-color: #99e2d0;
 
 /*loader spin*/
 
-$loader_size: 175px;
-
 .spinner {
   display: flex;
   justify-content: center;
@@ -67,10 +32,10 @@ $loader_size: 175px;
   height: $loader_size;
   width: $loader_size;
 
-  border: 8px solid #ff79da;
+  border: 8px solid $secondary-color;
   border-radius: 50%;
   position: relative;
-  box-shadow: 0px 0px 5px #ff79da;
+  box-shadow: 0px 0px 5px $secondary-color;
 
   &:after {
     content: "";
@@ -79,7 +44,7 @@ $loader_size: 175px;
 
     border-radius: 50%;
     border: 8px solid transparent;
-    border-top-color: #9356dc;
+    border-top-color: $primary-color;
 
     position: absolute;
     top: -8px;
@@ -94,15 +59,6 @@ $loader_size: 175px;
     font-size: 25px;
     text-align: center;
 
-    text-shadow: 0px 5px 10px #929292;
-  }
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
+    @include loader-text-shadow;
   }
 }

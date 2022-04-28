@@ -1,4 +1,5 @@
-@import "style.scss";
+@import "../base/style.scss";
+@import "../components/_loader.scss";
 
 .centered_column {
   /* Center & columning */
@@ -76,7 +77,7 @@
     padding: 10px 13px 10px 13px;
     border-radius: 50px;
     @include numb-color;
-    color: white;
+    @include back-light;
     font-size: 10px;
     font-weight: bold;
     position: relative;
@@ -90,7 +91,7 @@
   }
 }
 
-/* Presentation des restaurants */
+/* PRESENTATIONS DES RESTAURANTS */
 
 .stores_list {
   min-height: 100px;
@@ -99,8 +100,7 @@
   align-items: center;
 }
 
-$card-border: 20px;
-
+/* Carte de presentation*/
 .card {
   @include back-light;
   border-radius: $card-border;
@@ -126,6 +126,8 @@ $card-border: 20px;
 h3 {
   margin: 0px;
 }
+
+/*RESPONSIVE*/
 
 @media all and (min-width: 768px) {
   .localiser--button {
@@ -179,70 +181,61 @@ h3 {
   /* Titres de la page */
 
   .page_titles {
-    text-align: left;
+    text-align: center;
   }
 
-  /*RESPONSIVE*/
+  #guide,
+  #restaurants {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-  @media all and (min-width: 768px) {
-    .page_titles {
-      text-align: center;
-    }
+  .guide__list,
+  .stores_list {
+    width: 100%;
+  }
+}
 
-    #guide,
-    #restaurants {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .stores_list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 
-    .guide__list,
-    .stores_list {
+  .card {
+    height: 100%;
+    width: 330px;
+    margin-left: 0px;
+    margin-right: 0px;
+
+    &__img {
       width: 100%;
     }
   }
+}
 
-  @media all and (min-width: 768px) and (max-width: 991px) {
-    .stores_list {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-
-    .card {
-      height: 100%;
-      width: 330px;
-      margin-left: 0px;
-      margin-right: 0px;
-
-      &__img {
-        width: 100%;
-      }
-    }
+@media all and (min-width: 992px) {
+  .guide__list {
+    justify-content: space-evenly;
+    max-width: 1200px;
   }
 
-  @media all and (min-width: 992px) {
-    .guide__list {
-      justify-content: space-evenly;
-      max-width: 1200px;
-    }
+  .bull {
+    width: 250px;
+  }
 
-    .bull {
-      width: 250px;
-    }
+  .stores_list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
-    .stores_list {
-      flex-direction: row;
-      justify-content: space-between;
-    }
+  .card {
+    margin: 1%;
 
-    .card {
-      height: 330px;
-      margin: 1%;
-
-      &__img {
-        width: 100%;
-      }
+    &__img {
+      width: 100%;
     }
   }
 }

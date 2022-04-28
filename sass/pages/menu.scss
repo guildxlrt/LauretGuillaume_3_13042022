@@ -1,4 +1,4 @@
-@import "style.scss";
+@import "../base/style.scss";
 
 .title {
   &--frame {
@@ -38,6 +38,8 @@ h2 {
   width: fit-content;
 }
 
+/* Blocs de mise en page*/
+
 #menu {
   display: flex;
   flex-direction: column;
@@ -60,17 +62,13 @@ h2 {
   height: 100%;
 }
 
-/* Plate variables*/
-$plate_border: 15px;
-$plate_height: 70px;
-$plate_margin: 10px;
-
+/*Assiette*/
 .plate {
   display: flex;
   flex-direction: row;
   justify-content: stretch;
   align-items: center;
-  background-color: white;
+  @include back-light;
   width: 100%;
   height: $plate_height;
   margin-top: $plate_margin;
@@ -147,21 +145,6 @@ $plate_margin: 10px;
       }
     }
   }
-}
-
-@keyframes plt-check-blk-width {
-  0% {
-    width: 0px;
-  }
-  100% {
-    width: 70px;
-  }
-}
-
-/* boutton*/
-.bigbutton {
-  font-stretch: expanded;
-  margin-bottom: 300px;
 }
 
 /* RESPONSIVE*/
