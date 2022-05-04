@@ -1,20 +1,20 @@
 /*Width du block du ckecker du Menu Plate*/
 @keyframes plt-check-blk-width {
   0% {
-    width: 0px;
+    width: 0%;
   }
   100% {
-    width: 70px;
+    width: 100%;
   }
 }
 
 /* animation du coeur */
 @keyframes heart-grow {
   0% {
-    transform: scale(0);
+    transform: scale(0.34);
   }
   7% {
-    transform: scale(0.34);
+    transform: scale(0.54);
   }
   24% {
     transform: scale(0.68);

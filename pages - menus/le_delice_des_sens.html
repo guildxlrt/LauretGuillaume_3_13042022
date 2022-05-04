@@ -3,12 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="../css/style.css" />
-    <link rel="stylesheet" type="text/css" href="../css/menu.css" />
-    <style>
-      /*Ajout des polices Roboto et Shrikhand*/
-      @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
-    </style>
+    <link rel="stylesheet" type="text/css" href="../css/pages/menu.css" />
+
     <!-- importation de awesome fonts -->
     <link
       rel="stylesheet"
@@ -45,9 +41,11 @@
         <div class="title__text">
           <h1>Le délice des sens</h1>
           <!--Coeur-->
-          <i class="fa-regular fa-heart heart heart__empty">
-            <i class="fa-solid fa-heart heart heart__full"> </i>
-          </i>
+          <div class="heart--bloc">
+            <i class="fa-regular fa-heart heart heart__empty">
+              <i class="fa-solid fa-heart heart heart__full"></i>
+            </i>
+          </div>
         </div>
       </section>
 
@@ -64,7 +62,7 @@
                 <span class="plate__text--lines">Assaisonné au yuzu </span>
               </div>
               <span class="plate__price">25€</span>
-              <div class="plate__anim--bloc"></div>
+              <div class="plate__anim--blank"></div>
               <div class="plate__anim--bg">
                 <i class="fa-solid fa-circle-check plate__anim--icon"></i>
               </div>
@@ -80,7 +78,7 @@
                 </span>
               </div>
               <span class="plate__price">35€</span>
-              <div class="plate__anim--bloc"></div>
+              <div class="plate__anim--blank"></div>
               <div class="plate__anim--bg">
                 <i class="fa-solid fa-circle-check plate__anim--icon"></i>
               </div>
@@ -92,7 +90,7 @@
                 <span class="plate__text--lines">Aux truffes </span>
               </div>
               <span class="plate__price">20€</span>
-              <div class="plate__anim--bloc"></div>
+              <div class="plate__anim--blank"></div>
               <div class="plate__anim--bg">
                 <i class="fa-solid fa-circle-check plate__anim--icon"></i>
               </div>
@@ -112,7 +110,7 @@
                 <span class="plate__text--lines">Et sa crème de truffe</span>
               </div>
               <span class="plate__price">40€</span>
-              <div class="plate__anim--bloc"></div>
+              <div class="plate__anim--blank"></div>
               <div class="plate__anim--bg">
                 <i class="fa-solid fa-circle-check plate__anim--icon"></i>
               </div>
@@ -124,7 +122,7 @@
                 <span class="plate__text--lines">Et ses légumes de saison</span>
               </div>
               <span class="plate__price">35€</span>
-              <div class="plate__anim--bloc"></div>
+              <div class="plate__anim--blank"></div>
               <div class="plate__anim--bg">
                 <i class="fa-solid fa-circle-check plate__anim--icon"></i>
               </div>
@@ -136,7 +134,7 @@
                 <span class="plate__text--lines">Et sa purée de panais</span>
               </div>
               <span class="plate__price">44€</span>
-              <div class="plate__anim--bloc"></div>
+              <div class="plate__anim--blank"></div>
               <div class="plate__anim--bg">
                 <i class="fa-solid fa-circle-check plate__anim--icon"></i>
               </div>
@@ -154,7 +152,7 @@
                 <span class="plate__text--lines">Du chef</span>
               </div>
               <span class="plate__price">18€</span>
-              <div class="plate__anim--bloc"></div>
+              <div class="plate__anim--blank"></div>
               <div class="plate__anim--bg">
                 <i class="fa-solid fa-circle-check plate__anim--icon"></i>
               </div>
@@ -166,7 +164,7 @@
                 <span class="plate__text--lines">Revisitée</span>
               </div>
               <span class="plate__price">22€</span>
-              <div class="plate__anim--bloc"></div>
+              <div class="plate__anim--blank"></div>
               <div class="plate__anim--bg">
                 <i class="fa-solid fa-circle-check plate__anim--icon"></i>
               </div>
@@ -178,7 +176,7 @@
                 <span class="plate__text--lines">A la noisette</span>
               </div>
               <span class="plate__price">23€</span>
-              <div class="plate__anim--bloc"></div>
+              <div class="plate__anim--blank"></div>
               <div class="plate__anim--bg">
                 <i class="fa-solid fa-circle-check plate__anim--icon"></i>
               </div>
@@ -197,35 +195,33 @@
           alt="ohmyfood logo svg"
           class="footer__logo"
         />
-        <div>
-          <ul>
-            <li>
-              <a href="#">
-                <p class="footer__li">
-                  <i class="fa-solid fa-utensils footer--icon"></i> Proposer un
-                  restaurant
-                </p>
-              </a>
-            </li>
-            class="plate__text--lines"
 
-            <li>
-              <a href="#">
-                <p class="footer__li">
-                  <i class="fa-solid fa-handshake-angle footer--icon"></i>
-                  Devenir partenaire
-                </p>
-              </a>
-            </li>
+        <ul class="footer__ul">
+          <li>
+            <a href="#">
+              <p class="footer__li">
+                <i class="fa-solid fa-utensils footer--icon"></i> Proposer un
+                restaurant
+              </p>
+            </a>
+          </li>
 
-            <li>
-              <a href="#"><p class="footer__li">Mentions legales</p></a>
-            </li>
-            <li>
-              <a href="#"><p class="footer__li">Contacts</p></a>
-            </li>
-          </ul>
-        </div>
+          <li>
+            <a href="#">
+              <p class="footer__li">
+                <i class="fa-solid fa-handshake-angle footer--icon"></i>
+                Devenir partenaire
+              </p>
+            </a>
+          </li>
+
+          <li>
+            <a href="#"><p class="footer__li">Mentions legales</p></a>
+          </li>
+          <li>
+            <a href="#"><p class="footer__li">Contacts</p></a>
+          </li>
+        </ul>
       </div>
     </footer>
   </body>

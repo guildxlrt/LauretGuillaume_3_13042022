@@ -4,6 +4,9 @@
 @import "../components/_button.scss";
 @import "../components/_coeur.scss";
 
+/*Ajout des polices Roboto et Shrikhand*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+
 /* BLOCKS*/
 
 /* Blocs principaux */
@@ -71,7 +74,8 @@ footer {
 
 .footer {
   &__framing {
-    padding: 7%; /* Cadrage des blocs */
+    /* Cadrage des blocs */
+    padding: 7%;
   }
   &__logo {
     width: 166px;
@@ -121,11 +125,27 @@ h1 {
   }
 
   .footer {
+    &__framing {
+      padding: 7%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     &__logo {
       width: 208px;
     }
+    &__ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      width: 100%;
+      margin: 5% 0% 5% 0%;
+    }
     &__li {
       font-size: 19px;
+      width: fit-content;
+      text-align: center;
     }
   }
 }

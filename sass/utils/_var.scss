@@ -5,6 +5,9 @@ $secondary-color: #ff79da;
 $tertiary-color: #99e2d0;
 
 $grey: #eaeaea;
+$light-grey: lighten($grey, 3);
+
+$numb-bg-color: rgb(0, 102, 255);
 
 /* Plate variables*/
 $plate_border: 15px;

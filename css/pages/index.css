@@ -8,21 +8,22 @@
 /*Loader spin*/
 /* Carte de presentation*/
 /*Width du block du ckecker du Menu Plate*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 @keyframes plt-check-blk-width {
   0% {
-    width: 0px;
+    width: 0%;
   }
   100% {
-    width: 70px;
+    width: 100%;
   }
 }
 /* animation du coeur */
 @keyframes heart-grow {
   0% {
-    transform: scale(0);
+    transform: scale(0.34);
   }
   7% {
-    transform: scale(0.34);
+    transform: scale(0.54);
   }
   24% {
     transform: scale(0.68);
@@ -58,19 +59,19 @@
 /*Width du block du ckecker du Menu Plate*/
 @keyframes plt-check-blk-width {
   0% {
-    width: 0px;
+    width: 0%;
   }
   100% {
-    width: 70px;
+    width: 100%;
   }
 }
 /* animation du coeur */
 @keyframes heart-grow {
   0% {
-    transform: scale(0);
+    transform: scale(0.34);
   }
   7% {
-    transform: scale(0.34);
+    transform: scale(0.54);
   }
   24% {
     transform: scale(0.68);
@@ -102,9 +103,10 @@
   padding: 20px;
   margin: 20px 20px 55px 20px;
   border-radius: 60px;
-  color: white;
+  background-color: #f2f2f2;
   font-weight: bold;
   font-size: 17px;
+  color: #f2f2f2;
   position: relative;
   z-index: 1;
 }
@@ -115,6 +117,7 @@
   /*color modification*/
   background: linear-gradient(to right bottom, #ff88de, #9b63df);
   box-shadow: 0px 5px 10px #393939;
+  color: #eaeaea;
   /*position*/
   position: absolute;
   top: 0;
@@ -141,19 +144,19 @@
 /*Width du block du ckecker du Menu Plate*/
 @keyframes plt-check-blk-width {
   0% {
-    width: 0px;
+    width: 0%;
   }
   100% {
-    width: 70px;
+    width: 100%;
   }
 }
 /* animation du coeur */
 @keyframes heart-grow {
   0% {
-    transform: scale(0);
+    transform: scale(0.34);
   }
   7% {
-    transform: scale(0.34);
+    transform: scale(0.54);
   }
   24% {
     transform: scale(0.68);
@@ -181,13 +184,22 @@
 .heart {
   font-size: 25px;
 }
+.heart--bloc {
+  width: 25px;
+  height: 25px;
+}
+.heart--bloc:hover > .heart__empty {
+  color: transparent;
+}
+.heart--bloc:hover .heart__full {
+  color: #9356dc;
+  text-shadow: 0px 0px 6px rgba(255, 121, 217, 0.5019607843);
+  animation: heart-grow 550ms;
+}
 .heart__empty {
   color: black;
   position: relative;
   z-index: 0;
-}
-.heart__empty:active {
-  color: transparent;
 }
 .heart__full {
   color: transparent;
@@ -199,12 +211,8 @@
   left: 0;
   z-index: 1;
 }
-.heart__full:active {
-  color: #9356dc;
-  text-shadow: 0px 0px 6px rgba(255, 121, 217, 0.5019607843);
-  animation: heart-grow 550ms;
-}
 
+/*Ajout des polices Roboto et Shrikhand*/
 /* BLOCKS*/
 /* Blocs principaux */
 body {
@@ -265,8 +273,8 @@ footer {
 
 /* Pied de page*/
 .footer__framing {
-  padding: 7%;
   /* Cadrage des blocs */
+  padding: 7%;
 }
 .footer__logo {
   width: 166px;
@@ -310,11 +318,27 @@ h1 {
     font-size: 36px;
   }
 
+  .footer__framing {
+    padding: 7%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .footer__logo {
     width: 208px;
   }
+  .footer__ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 5% 0% 5% 0%;
+  }
   .footer__li {
     font-size: 19px;
+    width: fit-content;
+    text-align: center;
   }
 }
 /* MIXINS*/
@@ -329,19 +353,19 @@ h1 {
 /*Width du block du ckecker du Menu Plate*/
 @keyframes plt-check-blk-width {
   0% {
-    width: 0px;
+    width: 0%;
   }
   100% {
-    width: 70px;
+    width: 100%;
   }
 }
 /* animation du coeur */
 @keyframes heart-grow {
   0% {
-    transform: scale(0);
+    transform: scale(0.34);
   }
   7% {
-    transform: scale(0.34);
+    transform: scale(0.54);
   }
   24% {
     transform: scale(0.68);
@@ -380,8 +404,8 @@ h1 {
   z-index: 3;
 }
 .loader--hidden {
-  opacity: 0;
-  visibility: hidden;
+  /*cacher le loader en l'intergration du timer*/
+  display: none;
 }
 
 /*loader spin*/
@@ -476,12 +500,20 @@ h1 {
   background-color: #eaeaea;
   border-radius: 23px;
   margin: 15px 0px 15px 0px;
+  box-shadow: 0px 5px 10px #858585;
+}
+.bull:hover {
+  background-color: #efefef;
+  box-shadow: 0px 5px 10px #6c6c6c;
+}
+.bull:hover > .bull--numb {
+  background-color: #1f78ff;
 }
 .bull--numb {
   padding: 10px 13px 10px 13px;
   border-radius: 50px;
   background-color: rgb(0, 102, 255);
-  color: white;
+  color: #f2f2f2;
   font-size: 10px;
   font-weight: bold;
   position: relative;
@@ -492,6 +524,7 @@ h1 {
 }
 .bull--text {
   width: fit-content;
+  max-width: 200px;
 }
 
 /* PRESENTATIONS DES RESTAURANTS */
@@ -540,7 +573,7 @@ h3 {
 
   .guide__list {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin-top: 50px;
   }
 
@@ -596,7 +629,7 @@ h3 {
   .stores_list {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 
   .card {
@@ -611,12 +644,14 @@ h3 {
 }
 @media all and (min-width: 992px) {
   .guide__list {
-    justify-content: space-evenly;
     max-width: 1200px;
   }
 
   .bull {
     width: 250px;
+  }
+  .bull--text {
+    max-width: 200px;
   }
 
   .stores_list {

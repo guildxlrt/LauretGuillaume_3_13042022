@@ -72,12 +72,22 @@
   @include back-grey;
   border-radius: 23px;
   margin: 15px 0px 15px 0px;
+  box-shadow: 0px 5px 10px #858585;
+
+  &:hover {
+    background-color: lighten($grey, 2);
+    box-shadow: 0px 5px 10px darken(#858585, 10);
+
+    & > .bull--numb {
+      background-color: lighten($numb-bg-color, 6);
+    }
+  }
 
   &--numb {
     padding: 10px 13px 10px 13px;
     border-radius: 50px;
-    @include numb-color;
-    @include back-light;
+    @include numb-bg-color;
+    color: $light-grey;
     font-size: 10px;
     font-weight: bold;
     position: relative;
@@ -88,6 +98,7 @@
   }
   &--text {
     width: fit-content;
+    max-width: 200px;
   }
 }
 
@@ -140,7 +151,7 @@ h3 {
 
   .guide__list {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
 
     margin-top: 50px;
   }
@@ -201,7 +212,7 @@ h3 {
   .stores_list {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 
   .card {
@@ -218,12 +229,14 @@ h3 {
 
 @media all and (min-width: 992px) {
   .guide__list {
-    justify-content: space-evenly;
     max-width: 1200px;
   }
 
   .bull {
     width: 250px;
+    &--text {
+      max-width: 200px;
+    }
   }
 
   .stores_list {

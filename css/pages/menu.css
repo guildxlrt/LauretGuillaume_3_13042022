@@ -8,21 +8,22 @@
 /*Loader spin*/
 /* Carte de presentation*/
 /*Width du block du ckecker du Menu Plate*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 @keyframes plt-check-blk-width {
   0% {
-    width: 0px;
+    width: 0%;
   }
   100% {
-    width: 70px;
+    width: 100%;
   }
 }
 /* animation du coeur */
 @keyframes heart-grow {
   0% {
-    transform: scale(0);
+    transform: scale(0.34);
   }
   7% {
-    transform: scale(0.34);
+    transform: scale(0.54);
   }
   24% {
     transform: scale(0.68);
@@ -58,19 +59,19 @@
 /*Width du block du ckecker du Menu Plate*/
 @keyframes plt-check-blk-width {
   0% {
-    width: 0px;
+    width: 0%;
   }
   100% {
-    width: 70px;
+    width: 100%;
   }
 }
 /* animation du coeur */
 @keyframes heart-grow {
   0% {
-    transform: scale(0);
+    transform: scale(0.34);
   }
   7% {
-    transform: scale(0.34);
+    transform: scale(0.54);
   }
   24% {
     transform: scale(0.68);
@@ -102,9 +103,10 @@
   padding: 20px;
   margin: 20px 20px 55px 20px;
   border-radius: 60px;
-  color: white;
+  background-color: #f2f2f2;
   font-weight: bold;
   font-size: 17px;
+  color: #f2f2f2;
   position: relative;
   z-index: 1;
 }
@@ -115,6 +117,7 @@
   /*color modification*/
   background: linear-gradient(to right bottom, #ff88de, #9b63df);
   box-shadow: 0px 5px 10px #393939;
+  color: #eaeaea;
   /*position*/
   position: absolute;
   top: 0;
@@ -141,19 +144,19 @@
 /*Width du block du ckecker du Menu Plate*/
 @keyframes plt-check-blk-width {
   0% {
-    width: 0px;
+    width: 0%;
   }
   100% {
-    width: 70px;
+    width: 100%;
   }
 }
 /* animation du coeur */
 @keyframes heart-grow {
   0% {
-    transform: scale(0);
+    transform: scale(0.34);
   }
   7% {
-    transform: scale(0.34);
+    transform: scale(0.54);
   }
   24% {
     transform: scale(0.68);
@@ -181,13 +184,22 @@
 .heart {
   font-size: 25px;
 }
+.heart--bloc {
+  width: 25px;
+  height: 25px;
+}
+.heart--bloc:hover > .heart__empty {
+  color: transparent;
+}
+.heart--bloc:hover .heart__full {
+  color: #9356dc;
+  text-shadow: 0px 0px 6px rgba(255, 121, 217, 0.5019607843);
+  animation: heart-grow 550ms;
+}
 .heart__empty {
   color: black;
   position: relative;
   z-index: 0;
-}
-.heart__empty:active {
-  color: transparent;
 }
 .heart__full {
   color: transparent;
@@ -199,12 +211,8 @@
   left: 0;
   z-index: 1;
 }
-.heart__full:active {
-  color: #9356dc;
-  text-shadow: 0px 0px 6px rgba(255, 121, 217, 0.5019607843);
-  animation: heart-grow 550ms;
-}
 
+/*Ajout des polices Roboto et Shrikhand*/
 /* BLOCKS*/
 /* Blocs principaux */
 body {
@@ -265,8 +273,8 @@ footer {
 
 /* Pied de page*/
 .footer__framing {
-  padding: 7%;
   /* Cadrage des blocs */
+  padding: 7%;
 }
 .footer__logo {
   width: 166px;
@@ -310,11 +318,27 @@ h1 {
     font-size: 36px;
   }
 
+  .footer__framing {
+    padding: 7%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .footer__logo {
     width: 208px;
   }
+  .footer__ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 5% 0% 5% 0%;
+  }
   .footer__li {
     font-size: 19px;
+    width: fit-content;
+    text-align: center;
   }
 }
 .title--frame {
@@ -430,13 +454,14 @@ h2 {
 .plate__anim--icon {
   transition: transform 1000ms ease-in-out;
 }
-.plate__anim--bloc {
-  width: 0px;
+.plate__anim--blank {
+  width: auto;
   height: 70px;
 }
-.plate:hover .plate__anim--bloc {
-  animation: plt-check-blk-width 1000ms;
-  width: 70px;
+.plate:hover .plate__anim--blank {
+  animation: plt-check-blk-width 1000ms ease-in-out 300ms;
+  animation-fill-mode: both;
+  max-width: 70px;
 }
 .plate:hover .plate__anim--bg {
   transform: translateX(-60px);

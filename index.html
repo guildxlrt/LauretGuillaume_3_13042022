@@ -4,10 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="css/pages/index.css" />
-    <style>
-      /*Ajout des polices Roboto et Shrikhand*/
-      @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
-    </style>
     <!-- importation de awesome fonts -->
     <link
       rel="stylesheet"
@@ -92,9 +88,11 @@
                 <span> Menilmontant</span>
               </div>
               <!--Coeur-->
-              <i class="fa-regular fa-heart heart heart__empty">
-                <i class="fa-solid fa-heart heart heart__full"></i>
-              </i>
+              <div class="heart--bloc">
+                <i class="fa-regular fa-heart heart heart__empty">
+                  <i class="fa-solid fa-heart heart heart__full"></i>
+                </i>
+              </div>
             </div>
           </a>
           <a href="pages - menus/la_note_enchantee.html" class="card">
@@ -108,9 +106,11 @@
                 <span> Charone</span>
               </div>
               <!--Coeur-->
-              <i class="fa-regular fa-heart heart heart__empty">
-                <i class="fa-solid fa-heart heart heart__full"></i>
-              </i>
+              <div class="heart--bloc">
+                <i class="fa-regular fa-heart heart heart__empty">
+                  <i class="fa-solid fa-heart heart heart__full"></i>
+                </i>
+              </div>
             </div>
           </a>
           <a href="pages - menus/a_la_francaise.html" class="card">
@@ -124,9 +124,11 @@
                 <span> Citee Rouge</span>
               </div>
               <!--Coeur-->
-              <i class="fa-regular fa-heart heart heart__empty">
-                <i class="fa-solid fa-heart heart heart__full"></i>
-              </i>
+              <div class="heart--bloc">
+                <i class="fa-regular fa-heart heart heart__empty">
+                  <i class="fa-solid fa-heart heart heart__full"></i>
+                </i>
+              </div>
             </div>
           </a>
           <a href="pages - menus/le_delice_des_sens.html" class="card">
@@ -140,9 +142,11 @@
                 <span> Folie-Meliancourt</span>
               </div>
               <!--Coeur-->
-              <i class="fa-regular fa-heart heart heart__empty">
-                <i class="fa-solid fa-heart heart heart__full"></i>
-              </i>
+              <div class="heart--bloc">
+                <i class="fa-regular fa-heart heart heart__empty">
+                  <i class="fa-solid fa-heart heart heart__full"></i>
+                </i>
+              </div>
             </div>
           </a>
         </div>
@@ -157,34 +161,33 @@
           alt="ohmyfood logo svg"
           class="footer__logo"
         />
-        <div>
-          <ul>
-            <li>
-              <a href="#">
-                <p class="footer__li">
-                  <i class="fa-solid fa-utensils footer--icon"></i> Proposer un
-                  restaurant
-                </p>
-              </a>
-            </li>
 
-            <li>
-              <a href="#">
-                <p class="footer__li">
-                  <i class="fa-solid fa-handshake-angle footer--icon"></i>
-                  Devenir partenaire
-                </p>
-              </a>
-            </li>
+        <ul class="footer__ul">
+          <li>
+            <a href="#">
+              <p class="footer__li">
+                <i class="fa-solid fa-utensils footer--icon"></i> Proposer un
+                restaurant
+              </p>
+            </a>
+          </li>
 
-            <li>
-              <a href="#"><p class="footer__li">Mentions legales</p></a>
-            </li>
-            <li>
-              <a href="#"><p class="footer__li">Contacts</p></a>
-            </li>
-          </ul>
-        </div>
+          <li>
+            <a href="#">
+              <p class="footer__li">
+                <i class="fa-solid fa-handshake-angle footer--icon"></i>
+                Devenir partenaire
+              </p>
+            </a>
+          </li>
+
+          <li>
+            <a href="#"><p class="footer__li">Mentions legales</p></a>
+          </li>
+          <li>
+            <a href="#"><p class="footer__li">Contacts</p></a>
+          </li>
+        </ul>
       </div>
     </footer>
   </body>

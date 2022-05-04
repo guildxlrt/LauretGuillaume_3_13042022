@@ -6,14 +6,25 @@
 
 .heart {
   font-size: 25px;
+  &--bloc {
+    width: 25px;
+    height: 25px;
+
+    &:hover > .heart__empty {
+      color: transparent;
+    }
+    &:hover .heart__full {
+      color: $primary-color;
+      text-shadow: 0px 0px 6px #ff79d980;
+
+      animation: heart-grow 550ms;
+    }
+  }
+
   &__empty {
     color: black;
     position: relative;
     z-index: 0;
-
-    &:active {
-      color: transparent;
-    }
   }
   &__full {
     color: transparent;
@@ -24,12 +35,5 @@
     right: 0;
     left: 0;
     z-index: 1;
-
-    &:active {
-      color: $primary-color;
-      text-shadow: 0px 0px 6px #ff79d980;
-
-      animation: heart-grow 550ms;
-    }
   }
 }

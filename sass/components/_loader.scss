@@ -18,8 +18,8 @@
   z-index: 3;
 
   &--hidden {
-    opacity: 0;
-    visibility: hidden;
+    /*cacher le loader en l'intergration du timer*/
+    display: none;
   }
 }
 
