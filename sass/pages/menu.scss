@@ -80,12 +80,16 @@ h2 {
   overflow: hidden;
 
   &__text {
-    width: 70%;
-    height: 100%;
-    padding: 0% 5% 0% 5%;
+    /*flex*/
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    /* form parameters */
+    width: 70%;
+    height: 100%;
+    padding: 0% 5% 0% 5%;
+    /* position */
+    z-index: 1;
 
     &--lines {
       display: flex;
@@ -99,52 +103,66 @@ h2 {
     padding: 0px 20px 0px 20px;
     font-size: 16px;
     font-weight: bold;
+    margin: 0px auto;
   }
-
-  &__anim {
-    &--bg {
-      @include tertiary-bg-color;
-      padding: 0px 20px 0px 20px;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: $plate_height;
-      border-radius: 0px $plate_border $plate_border 0px;
-      font-size: 20px;
-
-      transition: transform 1000ms ease-in-out;
-
-      position: absolute;
-      right: -60px;
-    }
-
+  &__check {
+    /* colors */
+    @include tertiary-bg-color;
+    color: white;
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* form parameters */
+    border-radius: 0px $plate_border $plate_border 0px;
+    font-size: 20px;
+    padding: 0px 20px 0px 20px;
+    height: $plate_height;
+    /*position*/
+    position: absolute;
+    right: -60px;
+    /* animation*/
+    transition: transform 1000ms ease-in-out;
     &--icon {
       transition: transform 1000ms ease-in-out;
-    }
-
-    &--blank {
-      width: auto;
-      height: 70px;
     }
   }
 
   &:hover {
-    & .plate__anim {
-      &--blank {
-        animation: plt-check-blk-width 1000ms ease-in-out 300ms;
-        animation-fill-mode: both;
-        max-width: 70px;
+    & .plate {
+      &__price {
+        animation-name: price-margin-width;
+        animation-duration: 1000ms;
+        animation-delay: 150ms;
+        animation-timing-function: ease-in-out;
+        animation-direction: alternate;
+        animation-fill-mode: forwards;
       }
-      &--bg {
+      &__check {
         transform: translateX(-60px);
-      }
-      &--icon {
-        transform: rotate(360deg);
+        &--icon {
+          transform: rotate(360deg);
+        }
       }
     }
   }
+}
+
+/* MENU ANIMATION*/
+
+.anim1 {
+  opacity: 1;
+  transition: opacity 1s ease-in 300ms;
+}
+.anim2 {
+  transition: opacity 1s ease-in 600ms;
+}
+.anim3 {
+  transition: opacity 1s ease-in 1200ms;
+}
+.anim4 {
+  transition: opacity 1s ease-in 1500ms;
 }
 
 /* RESPONSIVE*/

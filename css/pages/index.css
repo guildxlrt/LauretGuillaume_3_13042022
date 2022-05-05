@@ -9,30 +9,30 @@
 /* Carte de presentation*/
 /*Width du block du ckecker du Menu Plate*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
-@keyframes plt-check-blk-width {
-  0% {
-    width: 0%;
+@keyframes price-margin-width {
+  from {
+    margin-right: 0px;
   }
-  100% {
-    width: 100%;
+  to {
+    margin-right: 60px;
   }
 }
 /* animation du coeur */
 @keyframes heart-grow {
   0% {
-    transform: scale(0.34);
+    transform: scale(0);
   }
   7% {
-    transform: scale(0.54);
+    transform: scale(0.34);
   }
   24% {
-    transform: scale(0.68);
+    transform: scale(0.48);
   }
   34% {
-    transform: scale(0.82);
+    transform: scale(0.62);
   }
   57% {
-    transform: scale(1.38);
+    transform: scale(1.6);
   }
   100% {
     transform: scale(1);
@@ -40,10 +40,10 @@
 }
 /* animation du spinner */
 @keyframes spin {
-  0% {
+  from {
     transform: rotate(0deg);
   }
-  100% {
+  to {
     transform: rotate(360deg);
   }
 }
@@ -57,30 +57,30 @@
 /*Loader spin*/
 /* Carte de presentation*/
 /*Width du block du ckecker du Menu Plate*/
-@keyframes plt-check-blk-width {
-  0% {
-    width: 0%;
+@keyframes price-margin-width {
+  from {
+    margin-right: 0px;
   }
-  100% {
-    width: 100%;
+  to {
+    margin-right: 60px;
   }
 }
 /* animation du coeur */
 @keyframes heart-grow {
   0% {
-    transform: scale(0.34);
+    transform: scale(0);
   }
   7% {
-    transform: scale(0.54);
+    transform: scale(0.34);
   }
   24% {
-    transform: scale(0.68);
+    transform: scale(0.48);
   }
   34% {
-    transform: scale(0.82);
+    transform: scale(0.62);
   }
   57% {
-    transform: scale(1.38);
+    transform: scale(1.6);
   }
   100% {
     transform: scale(1);
@@ -88,10 +88,10 @@
 }
 /* animation du spinner */
 @keyframes spin {
-  0% {
+  from {
     transform: rotate(0deg);
   }
-  100% {
+  to {
     transform: rotate(360deg);
   }
 }
@@ -142,30 +142,30 @@
 /*Loader spin*/
 /* Carte de presentation*/
 /*Width du block du ckecker du Menu Plate*/
-@keyframes plt-check-blk-width {
-  0% {
-    width: 0%;
+@keyframes price-margin-width {
+  from {
+    margin-right: 0px;
   }
-  100% {
-    width: 100%;
+  to {
+    margin-right: 60px;
   }
 }
 /* animation du coeur */
 @keyframes heart-grow {
   0% {
-    transform: scale(0.34);
+    transform: scale(0);
   }
   7% {
-    transform: scale(0.54);
+    transform: scale(0.34);
   }
   24% {
-    transform: scale(0.68);
+    transform: scale(0.48);
   }
   34% {
-    transform: scale(0.82);
+    transform: scale(0.62);
   }
   57% {
-    transform: scale(1.38);
+    transform: scale(1.6);
   }
   100% {
     transform: scale(1);
@@ -173,10 +173,10 @@
 }
 /* animation du spinner */
 @keyframes spin {
-  0% {
+  from {
     transform: rotate(0deg);
   }
-  100% {
+  to {
     transform: rotate(360deg);
   }
 }
@@ -194,7 +194,7 @@
 .heart--bloc:hover .heart__full {
   color: #9356dc;
   text-shadow: 0px 0px 6px rgba(255, 121, 217, 0.5019607843);
-  animation: heart-grow 550ms;
+  animation: heart-grow 750ms;
 }
 .heart__empty {
   color: black;
@@ -351,30 +351,30 @@ h1 {
 /*Loader spin*/
 /* Carte de presentation*/
 /*Width du block du ckecker du Menu Plate*/
-@keyframes plt-check-blk-width {
-  0% {
-    width: 0%;
+@keyframes price-margin-width {
+  from {
+    margin-right: 0px;
   }
-  100% {
-    width: 100%;
+  to {
+    margin-right: 60px;
   }
 }
 /* animation du coeur */
 @keyframes heart-grow {
   0% {
-    transform: scale(0.34);
+    transform: scale(0);
   }
   7% {
-    transform: scale(0.54);
+    transform: scale(0.34);
   }
   24% {
-    transform: scale(0.68);
+    transform: scale(0.48);
   }
   34% {
-    transform: scale(0.82);
+    transform: scale(0.62);
   }
   57% {
-    transform: scale(1.38);
+    transform: scale(1.6);
   }
   100% {
     transform: scale(1);
@@ -382,10 +382,10 @@ h1 {
 }
 /* animation du spinner */
 @keyframes spin {
-  0% {
+  from {
     transform: rotate(0deg);
   }
-  100% {
+  to {
     transform: rotate(360deg);
   }
 }
