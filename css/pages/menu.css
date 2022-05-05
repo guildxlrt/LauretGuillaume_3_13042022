@@ -9,12 +9,12 @@
 /* Carte de presentation*/
 /*Width du block du ckecker du Menu Plate*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
-@keyframes price-margin-width {
+@keyframes anim-text {
   from {
-    margin-right: 0px;
+    width: 70%;
   }
   to {
-    margin-right: 60px;
+    width: 50%;
   }
 }
 /* animation du coeur */
@@ -57,12 +57,12 @@
 /*Loader spin*/
 /* Carte de presentation*/
 /*Width du block du ckecker du Menu Plate*/
-@keyframes price-margin-width {
+@keyframes anim-text {
   from {
-    margin-right: 0px;
+    width: 70%;
   }
   to {
-    margin-right: 60px;
+    width: 50%;
   }
 }
 /* animation du coeur */
@@ -142,12 +142,12 @@
 /*Loader spin*/
 /* Carte de presentation*/
 /*Width du block du ckecker du Menu Plate*/
-@keyframes price-margin-width {
+@keyframes anim-text {
   from {
-    margin-right: 0px;
+    width: 70%;
   }
   to {
-    margin-right: 60px;
+    width: 50%;
   }
 }
 /* animation du coeur */
@@ -398,8 +398,20 @@ h2 {
   align-items: center;
   justify-content: space-between;
   height: 100%;
+  animation: anim-menu-height 1000ms;
 }
 
+@keyframes anim-menu-height {
+  0% {
+    height: 135%;
+  }
+  90% {
+    height: 80%;
+  }
+  100% {
+    height: 100%;
+  }
+}
 /*Assiette*/
 .plate {
   display: flex;
@@ -464,8 +476,8 @@ h2 {
 .plate__check--icon {
   transition: transform 1000ms ease-in-out;
 }
-.plate:hover .plate__price {
-  animation-name: price-margin-width;
+.plate:hover .plate__text {
+  animation-name: anim-text;
   animation-duration: 1000ms;
   animation-delay: 150ms;
   animation-timing-function: ease-in-out;
@@ -480,23 +492,56 @@ h2 {
 }
 
 /* MENU ANIMATION*/
-.anim1 {
-  opacity: 1;
-  transition: opacity 1s ease-in 300ms;
+.anim__1 {
+  opacity: 0;
+  /*animation*/
+  animation-name: anim-menu;
+  animation-duration: 1.2s;
+  animation-timing-function: cubic-bezier(0.39, 0.13, 0.53, 1.02);
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-delay: 600ms;
+  transform: translateY(0px);
+}
+.anim__2 {
+  opacity: 0;
+  /*animation*/
+  animation-name: anim-menu;
+  animation-duration: 1.2s;
+  animation-timing-function: cubic-bezier(0.39, 0.13, 0.53, 1.02);
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-delay: 1200ms;
+  transform: translateY(0px);
+}
+.anim__3 {
+  opacity: 0;
+  /*animation*/
+  animation-name: anim-menu;
+  animation-duration: 1.2s;
+  animation-timing-function: cubic-bezier(0.39, 0.13, 0.53, 1.02);
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-delay: 1800ms;
+  transform: translateY(0px);
 }
 
-.anim2 {
-  transition: opacity 1s ease-in 600ms;
+@keyframes anim-menu {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+  35% {
+    opacity: 0;
+  }
+  90% {
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
-
-.anim3 {
-  transition: opacity 1s ease-in 1200ms;
-}
-
-.anim4 {
-  transition: opacity 1s ease-in 1500ms;
-}
-
 /* RESPONSIVE*/
 @media all and (min-width: 768px) {
   .title__text {

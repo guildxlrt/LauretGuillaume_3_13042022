@@ -99,12 +99,14 @@ h2 {
       overflow: hidden;
     }
   }
+
   &__price {
     padding: 0px 20px 0px 20px;
     font-size: 16px;
     font-weight: bold;
     margin: 0px auto;
   }
+
   &__check {
     /* colors */
     @include tertiary-bg-color;
@@ -131,8 +133,8 @@ h2 {
 
   &:hover {
     & .plate {
-      &__price {
-        animation-name: price-margin-width;
+      &__text {
+        animation-name: anim-text;
         animation-duration: 1000ms;
         animation-delay: 150ms;
         animation-timing-function: ease-in-out;
@@ -151,18 +153,63 @@ h2 {
 
 /* MENU ANIMATION*/
 
-.anim1 {
-  opacity: 1;
-  transition: opacity 1s ease-in 300ms;
+.anim {
+  &__1 {
+    opacity: 0;
+    /*animation*/
+    animation-name: anim-menu;
+    animation-duration: 1.2s;
+    animation-timing-function: cubic-bezier(0.39, 0.13, 0.53, 1.02);
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+
+    animation-delay: 600ms;
+    transform: translateY(0px);
+  }
+  &__2 {
+    opacity: 0;
+    /*animation*/
+    animation-name: anim-menu;
+    animation-duration: 1.2s;
+    animation-timing-function: cubic-bezier(0.39, 0.13, 0.53, 1.02);
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+
+    animation-delay: 1200ms;
+    transform: translateY(0px);
+  }
+  &__3 {
+    opacity: 0;
+    /*animation*/
+    animation-name: anim-menu;
+    animation-duration: 1.2s;
+    animation-timing-function: cubic-bezier(0.39, 0.13, 0.53, 1.02);
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+
+    animation-delay: 1800ms;
+    transform: translateY(0px);
+  }
 }
-.anim2 {
-  transition: opacity 1s ease-in 600ms;
-}
-.anim3 {
-  transition: opacity 1s ease-in 1200ms;
-}
-.anim4 {
-  transition: opacity 1s ease-in 1500ms;
+
+@keyframes anim-menu {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+
+  35% {
+    opacity: 0;
+  }
+
+  90% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 
 /* RESPONSIVE*/

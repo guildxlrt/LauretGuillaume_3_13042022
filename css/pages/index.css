@@ -9,12 +9,12 @@
 /* Carte de presentation*/
 /*Width du block du ckecker du Menu Plate*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
-@keyframes price-margin-width {
+@keyframes anim-text {
   from {
-    margin-right: 0px;
+    width: 70%;
   }
   to {
-    margin-right: 60px;
+    width: 50%;
   }
 }
 /* animation du coeur */
@@ -57,12 +57,12 @@
 /*Loader spin*/
 /* Carte de presentation*/
 /*Width du block du ckecker du Menu Plate*/
-@keyframes price-margin-width {
+@keyframes anim-text {
   from {
-    margin-right: 0px;
+    width: 70%;
   }
   to {
-    margin-right: 60px;
+    width: 50%;
   }
 }
 /* animation du coeur */
@@ -142,12 +142,12 @@
 /*Loader spin*/
 /* Carte de presentation*/
 /*Width du block du ckecker du Menu Plate*/
-@keyframes price-margin-width {
+@keyframes anim-text {
   from {
-    margin-right: 0px;
+    width: 70%;
   }
   to {
-    margin-right: 60px;
+    width: 50%;
   }
 }
 /* animation du coeur */
@@ -351,12 +351,12 @@ h1 {
 /*Loader spin*/
 /* Carte de presentation*/
 /*Width du block du ckecker du Menu Plate*/
-@keyframes price-margin-width {
+@keyframes anim-text {
   from {
-    margin-right: 0px;
+    width: 70%;
   }
   to {
-    margin-right: 60px;
+    width: 50%;
   }
 }
 /* animation du coeur */
