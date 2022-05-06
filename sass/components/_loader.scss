@@ -6,21 +6,21 @@
 
 /*loader screen*/
 .loader {
+  /*color*/
+  @include back-grey;
+  /*flex*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*position*/
   position: fixed;
   top: 0px;
   left: 0px;
   width: 100%;
   height: 100%;
-  @include back-grey;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 3;
-
-  &--hidden {
-    /*cacher le loader en l'intergration du timer*/
-    display: none;
-  }
+  /*animation*/
+  animation: hide-loader 3s 1;
+  animation-fill-mode: forwards;
 }
 
 /*loader spin*/

@@ -30,7 +30,27 @@
   }
 }
 
+/* disparition du loader */
+
+@keyframes hide-loader {
+  0% {
+    opacity: 1;
+    z-index: 3;
+  }
+
+  80% {
+    opacity: 1;
+    z-index: 3;
+  }
+
+  100% {
+    opacity: 0;
+    z-index: -2;
+  }
+}
+
 /* animation du spinner */
+
 @keyframes spin {
   from {
     transform: rotate(0deg);
