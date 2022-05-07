@@ -73,10 +73,10 @@
 /*Width du text du ckecker du Menu Plate*/
 @keyframes anim-text {
   from {
-    margin-right: 0px;
+    margin-right: 60px;
   }
   to {
-    margin-right: 70px;
+    margin-right: 120px;
   }
 }
 /* MIXINS*/
@@ -153,10 +153,10 @@
 /*Width du text du ckecker du Menu Plate*/
 @keyframes anim-text {
   from {
-    margin-right: 0px;
+    margin-right: 60px;
   }
   to {
-    margin-right: 70px;
+    margin-right: 120px;
   }
 }
 /* Buttons */
@@ -270,10 +270,10 @@
 /*Width du text du ckecker du Menu Plate*/
 @keyframes anim-text {
   from {
-    margin-right: 0px;
+    margin-right: 60px;
   }
   to {
-    margin-right: 70px;
+    margin-right: 120px;
   }
 }
 /* Coeur */
@@ -575,6 +575,98 @@ h2 {
 }
 .plate:hover .plate__check--icon {
   transform: rotate(360deg);
+}
+
+.dish {
+  /* flex */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  /* form parameters */
+  width: 100%;
+  height: 70px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  /*position*/
+  position: relative;
+  overflow: hidden;
+  /*color*/
+  background-color: #f2f2f2;
+  box-shadow: 0px 3px 10px #858585;
+  /*animation*/
+}
+.dish__text {
+  /*flex*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  /* form parameters */
+  width: 100%;
+  height: 100%;
+  padding: 0%;
+  margin: 0 auto;
+}
+.dish__text--blank {
+  width: 0px;
+}
+.dish__text--line {
+  line-height: 21px;
+  max-height: 21px;
+  margin: 0px 60px 0px 5%;
+  width: auto;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.dish__price {
+  /*position*/
+  position: absolute;
+  right: -60px;
+  /* flex */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  /* animation*/
+  transition: transform 1000ms ease-in-out;
+}
+.dish__price--numb {
+  padding: 0px 15px 0px 15px;
+  width: 30px;
+}
+.dish__price--check {
+  /* flex */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* colors */
+  background-color: #99e2d0;
+  color: white;
+  /* form parameters */
+  font-size: 20px;
+  padding: 0px 20px 0px 20px;
+  height: 70px;
+  width: 20px;
+}
+.dish__price--check--icon {
+  transition: transform 1000ms ease-in-out;
+}
+.dish:hover .dish__text--line {
+  animation-name: anim-text;
+  animation-duration: 1000ms;
+  animation-delay: 150ms;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+}
+.dish:hover .dish__price {
+  transform: translateX(-60px);
+}
+.dish:hover .dish__price--check--icon {
+  transform: rotate(-360deg);
 }
 
 /* MENU ANIMATION*/

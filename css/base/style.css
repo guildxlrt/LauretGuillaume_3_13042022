@@ -73,10 +73,10 @@
 /*Width du text du ckecker du Menu Plate*/
 @keyframes anim-text {
   from {
-    margin-right: 0px;
+    margin-right: 60px;
   }
   to {
-    margin-right: 70px;
+    margin-right: 120px;
   }
 }
 /* MIXINS*/
@@ -153,10 +153,10 @@
 /*Width du text du ckecker du Menu Plate*/
 @keyframes anim-text {
   from {
-    margin-right: 0px;
+    margin-right: 60px;
   }
   to {
-    margin-right: 70px;
+    margin-right: 120px;
   }
 }
 /* Buttons */
@@ -270,10 +270,10 @@
 /*Width du text du ckecker du Menu Plate*/
 @keyframes anim-text {
   from {
-    margin-right: 0px;
+    margin-right: 60px;
   }
   to {
-    margin-right: 70px;
+    margin-right: 120px;
   }
 }
 /* Coeur */
