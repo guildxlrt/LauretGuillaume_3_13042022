@@ -9,6 +9,7 @@
 /* Carte de presentation*/
 /* animation du coeur */
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 @keyframes heart-grow {
   0% {
     transform: scale(0);
@@ -496,87 +497,481 @@ h2 {
   height: 100%;
 }
 
-/*Assiette*/
-.plate {
-  display: flex;
-  flex-direction: row;
-  justify-content: stretch;
-  align-items: center;
-  background-color: #f2f2f2;
-  width: 100%;
-  height: 70px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border-radius: 15px;
-  box-shadow: 0px 3px 10px #858585;
-  position: relative;
-  overflow: hidden;
-  /*animation du checker*/
-}
-.plate__text {
-  /*flex*/
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  /* form parameters */
-  width: 70%;
-  height: 100%;
-  padding: 0% 5% 0% 5%;
-  /* position */
-  z-index: 1;
-}
-.plate__text--lines {
-  display: inline;
-  margin: 0px;
-  max-height: 21px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-}
-.plate__price {
-  padding: 0px 20px 0px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0px auto;
-}
-.plate__check {
-  /* colors */
-  background-color: #99e2d0;
-  color: white;
-  /* flex */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* form parameters */
-  border-radius: 0px 15px 15px 0px;
-  font-size: 20px;
-  padding: 0px 20px 0px 20px;
-  height: 70px;
-  /*position*/
-  position: absolute;
-  right: -60px;
-  /* animation*/
-  transition: transform 1000ms ease-in-out;
-}
-.plate__check--icon {
-  transition: transform 1000ms ease-in-out;
-}
-.plate:hover .plate__price {
-  animation-name: anim-text;
-  animation-duration: 1000ms;
-  animation-delay: 150ms;
-  animation-timing-function: ease-in-out;
-  animation-direction: alternate;
+/* MENU ANIMATION*/
+.anim__1 {
+  opacity: 0;
+  /*animation*/
+  animation-name: anim-menu;
+  animation-duration: 1.2s;
+  animation-timing-function: cubic-bezier(0.39, 0.13, 0.53, 1.02);
+  animation-direction: normal;
   animation-fill-mode: forwards;
+  animation-delay: 600ms;
+  transform: translateY(0px);
 }
-.plate:hover .plate__check {
-  transform: translateX(-60px);
+.anim__2 {
+  opacity: 0;
+  /*animation*/
+  animation-name: anim-menu;
+  animation-duration: 1.2s;
+  animation-timing-function: cubic-bezier(0.39, 0.13, 0.53, 1.02);
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-delay: 1200ms;
+  transform: translateY(0px);
 }
-.plate:hover .plate__check--icon {
-  transform: rotate(360deg);
+.anim__3 {
+  opacity: 0;
+  /*animation*/
+  animation-name: anim-menu;
+  animation-duration: 1.2s;
+  animation-timing-function: cubic-bezier(0.39, 0.13, 0.53, 1.02);
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-delay: 1800ms;
+  transform: translateY(0px);
 }
 
+/* Carte d'un plat */
+/* MIXINS*/
+/*couleurs de fond de page*/
+/*couleur principales utilisees en fond d'element*/
+/*Ombres */
+/*loader font shadow*/
+/*Couleurs */
+/* Plate variables*/
+/*Loader spin*/
+/* Carte de presentation*/
+/* animation du coeur */
+@keyframes heart-grow {
+  0% {
+    transform: scale(0);
+  }
+  7% {
+    transform: scale(0.34);
+  }
+  24% {
+    transform: scale(0.48);
+  }
+  34% {
+    transform: scale(0.62);
+  }
+  57% {
+    transform: scale(1.6);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* disparition du loader */
+@keyframes hide-loader {
+  0% {
+    opacity: 1;
+    z-index: 3;
+  }
+  80% {
+    opacity: 1;
+    z-index: 3;
+  }
+  100% {
+    opacity: 0;
+    z-index: -2;
+  }
+}
+/* animation du spinner */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* animation du menu */
+@keyframes anim-menu {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+  35% {
+    opacity: 0;
+  }
+  90% {
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+/*Width du text du ckecker du Menu Plate*/
+@keyframes anim-text {
+  from {
+    margin-right: 60px;
+  }
+  to {
+    margin-right: 120px;
+  }
+}
+/* MIXINS*/
+/*couleurs de fond de page*/
+/*couleur principales utilisees en fond d'element*/
+/*Ombres */
+/*loader font shadow*/
+/*Couleurs */
+/* Plate variables*/
+/*Loader spin*/
+/* Carte de presentation*/
+/* animation du coeur */
+@keyframes heart-grow {
+  0% {
+    transform: scale(0);
+  }
+  7% {
+    transform: scale(0.34);
+  }
+  24% {
+    transform: scale(0.48);
+  }
+  34% {
+    transform: scale(0.62);
+  }
+  57% {
+    transform: scale(1.6);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* disparition du loader */
+@keyframes hide-loader {
+  0% {
+    opacity: 1;
+    z-index: 3;
+  }
+  80% {
+    opacity: 1;
+    z-index: 3;
+  }
+  100% {
+    opacity: 0;
+    z-index: -2;
+  }
+}
+/* animation du spinner */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* animation du menu */
+@keyframes anim-menu {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+  35% {
+    opacity: 0;
+  }
+  90% {
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+/*Width du text du ckecker du Menu Plate*/
+@keyframes anim-text {
+  from {
+    margin-right: 60px;
+  }
+  to {
+    margin-right: 120px;
+  }
+}
+/* Buttons */
+.btn {
+  background: linear-gradient(to right bottom, #ff79da, #9356dc);
+  box-shadow: 0px 5px 10px #858585;
+  list-style-type: none;
+  padding: 20px;
+  margin: 20px 20px 55px 20px;
+  border-radius: 60px;
+  background-color: #f2f2f2;
+  font-weight: bold;
+  font-size: 17px;
+  color: #f2f2f2;
+  position: relative;
+  z-index: 1;
+}
+.btn:hover::after {
+  opacity: 1;
+}
+.btn::after {
+  /*color modification*/
+  background: linear-gradient(to right bottom, #ff88de, #9b63df);
+  box-shadow: 0px 5px 10px #393939;
+  color: #eaeaea;
+  /*position*/
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  /*presets*/
+  content: "";
+  opacity: 0;
+  border-radius: 60px;
+  transition: opacity 250ms;
+}
+
+/* MIXINS*/
+/*couleurs de fond de page*/
+/*couleur principales utilisees en fond d'element*/
+/*Ombres */
+/*loader font shadow*/
+/*Couleurs */
+/* Plate variables*/
+/*Loader spin*/
+/* Carte de presentation*/
+/* animation du coeur */
+@keyframes heart-grow {
+  0% {
+    transform: scale(0);
+  }
+  7% {
+    transform: scale(0.34);
+  }
+  24% {
+    transform: scale(0.48);
+  }
+  34% {
+    transform: scale(0.62);
+  }
+  57% {
+    transform: scale(1.6);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* disparition du loader */
+@keyframes hide-loader {
+  0% {
+    opacity: 1;
+    z-index: 3;
+  }
+  80% {
+    opacity: 1;
+    z-index: 3;
+  }
+  100% {
+    opacity: 0;
+    z-index: -2;
+  }
+}
+/* animation du spinner */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* animation du menu */
+@keyframes anim-menu {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+  35% {
+    opacity: 0;
+  }
+  90% {
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+/*Width du text du ckecker du Menu Plate*/
+@keyframes anim-text {
+  from {
+    margin-right: 60px;
+  }
+  to {
+    margin-right: 120px;
+  }
+}
+/* Coeur */
+.heart {
+  font-size: 25px;
+}
+.heart--bloc {
+  width: 25px;
+  height: 25px;
+}
+.heart--bloc:hover > .heart__empty {
+  color: transparent;
+}
+.heart--bloc:hover .heart__full {
+  color: #9356dc;
+  text-shadow: 0px 0px 6px rgba(255, 121, 217, 0.5019607843);
+  animation: heart-grow 750ms;
+}
+.heart__empty {
+  color: black;
+  position: relative;
+  z-index: 0;
+}
+.heart__full {
+  color: transparent;
+  /*position*/
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/*Ajout des polices Roboto et Shrikhand*/
+/* BLOCKS*/
+/* Blocs principaux */
+body {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  font-family: "Roboto", sans-serif;
+  margin: 0%;
+  min-width: 280px;
+  z-index: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  padding: 15px 0% 15px 0%;
+  position: sticky;
+  top: 0px;
+  background-color: #f2f2f2;
+  box-shadow: 0px 3px 10px #858585;
+  z-index: 2;
+}
+
+main {
+  flex-direction: column;
+}
+
+footer {
+  flex-direction: column;
+  background-color: #39383a;
+  min-height: 105.95px;
+}
+
+/*Pied de page*/
+.header__logo {
+  object-fit: cover;
+  width: 179px;
+}
+.header__arrow {
+  font-style: normal;
+  font-size: 24px;
+  position: absolute;
+  left: 7%;
+  top: 17px;
+}
+.header__arrow:hover {
+  color: #99e2d0;
+}
+
+/* Enlever la fleche*/
+#no_arrow {
+  display: none;
+}
+
+/* Pied de page*/
+.footer__framing {
+  /* Cadrage des blocs */
+  padding: 7%;
+}
+.footer__logo {
+  width: 166px;
+}
+.footer__li {
+  font-size: 15px;
+  color: white;
+}
+.footer--icon {
+  margin-right: 10px;
+  width: 15px;
+}
+
+/* Pseudo-Elements*/
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  padding: 0%;
+}
+
+button {
+  border: none;
+}
+
+h1 {
+  font-size: 22px;
+}
+
+/* RESPONSIVE*/
+@media all and (min-width: 768px) {
+  #header__logo {
+    width: 268px;
+  }
+  #header__arrow {
+    font-style: normal;
+    font-size: 36px;
+  }
+
+  .footer__framing {
+    padding: 7%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer__logo {
+    width: 208px;
+  }
+  .footer__ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 5% 0% 5% 0%;
+  }
+  .footer__li {
+    font-size: 19px;
+    width: fit-content;
+    text-align: center;
+  }
+}
+/* Carte d'un plat */
 .dish {
   /* flex */
   display: flex;
@@ -667,41 +1062,6 @@ h2 {
 }
 .dish:hover .dish__price--check--icon {
   transform: rotate(-360deg);
-}
-
-/* MENU ANIMATION*/
-.anim__1 {
-  opacity: 0;
-  /*animation*/
-  animation-name: anim-menu;
-  animation-duration: 1.2s;
-  animation-timing-function: cubic-bezier(0.39, 0.13, 0.53, 1.02);
-  animation-direction: normal;
-  animation-fill-mode: forwards;
-  animation-delay: 600ms;
-  transform: translateY(0px);
-}
-.anim__2 {
-  opacity: 0;
-  /*animation*/
-  animation-name: anim-menu;
-  animation-duration: 1.2s;
-  animation-timing-function: cubic-bezier(0.39, 0.13, 0.53, 1.02);
-  animation-direction: normal;
-  animation-fill-mode: forwards;
-  animation-delay: 1200ms;
-  transform: translateY(0px);
-}
-.anim__3 {
-  opacity: 0;
-  /*animation*/
-  animation-name: anim-menu;
-  animation-duration: 1.2s;
-  animation-timing-function: cubic-bezier(0.39, 0.13, 0.53, 1.02);
-  animation-direction: normal;
-  animation-fill-mode: forwards;
-  animation-delay: 1800ms;
-  transform: translateY(0px);
 }
 
 /* RESPONSIVE*/
