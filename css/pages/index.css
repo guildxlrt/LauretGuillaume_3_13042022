@@ -7,17 +7,8 @@
 /* Plate variables*/
 /*Loader spin*/
 /* Carte de presentation*/
-/*Width du block du ckecker du Menu Plate*/
-@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
-@keyframes anim-text {
-  from {
-    width: 70%;
-  }
-  to {
-    width: 50%;
-  }
-}
 /* animation du coeur */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 @keyframes heart-grow {
   0% {
     transform: scale(0);
@@ -60,6 +51,32 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+/* animation du menu */
+@keyframes anim-menu {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+  35% {
+    opacity: 0;
+  }
+  90% {
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+/*Width du text du ckecker du Menu Plate*/
+@keyframes anim-text {
+  from {
+    margin-right: 0px;
+  }
+  to {
+    margin-right: 70px;
   }
 }
 /* MIXINS*/
@@ -71,15 +88,6 @@
 /* Plate variables*/
 /*Loader spin*/
 /* Carte de presentation*/
-/*Width du block du ckecker du Menu Plate*/
-@keyframes anim-text {
-  from {
-    width: 70%;
-  }
-  to {
-    width: 50%;
-  }
-}
 /* animation du coeur */
 @keyframes heart-grow {
   0% {
@@ -123,6 +131,32 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+/* animation du menu */
+@keyframes anim-menu {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+  35% {
+    opacity: 0;
+  }
+  90% {
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+/*Width du text du ckecker du Menu Plate*/
+@keyframes anim-text {
+  from {
+    margin-right: 0px;
+  }
+  to {
+    margin-right: 70px;
   }
 }
 /* Buttons */
@@ -171,15 +205,6 @@
 /* Plate variables*/
 /*Loader spin*/
 /* Carte de presentation*/
-/*Width du block du ckecker du Menu Plate*/
-@keyframes anim-text {
-  from {
-    width: 70%;
-  }
-  to {
-    width: 50%;
-  }
-}
 /* animation du coeur */
 @keyframes heart-grow {
   0% {
@@ -223,6 +248,32 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+/* animation du menu */
+@keyframes anim-menu {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+  35% {
+    opacity: 0;
+  }
+  90% {
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+/*Width du text du ckecker du Menu Plate*/
+@keyframes anim-text {
+  from {
+    margin-right: 0px;
+  }
+  to {
+    margin-right: 70px;
   }
 }
 /* Coeur */
@@ -395,15 +446,6 @@ h1 {
 /* Plate variables*/
 /*Loader spin*/
 /* Carte de presentation*/
-/*Width du block du ckecker du Menu Plate*/
-@keyframes anim-text {
-  from {
-    width: 70%;
-  }
-  to {
-    width: 50%;
-  }
-}
 /* animation du coeur */
 @keyframes heart-grow {
   0% {
@@ -447,6 +489,32 @@ h1 {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+/* animation du menu */
+@keyframes anim-menu {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+  35% {
+    opacity: 0;
+  }
+  90% {
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+/*Width du text du ckecker du Menu Plate*/
+@keyframes anim-text {
+  from {
+    margin-right: 0px;
+  }
+  to {
+    margin-right: 70px;
   }
 }
 /*LOADER*/

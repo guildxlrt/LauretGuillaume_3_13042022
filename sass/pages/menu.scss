@@ -92,11 +92,12 @@ h2 {
     z-index: 1;
 
     &--lines {
-      display: flex;
+      display: inline;
       margin: 0px;
       max-height: 21px;
       text-overflow: ellipsis;
       overflow: hidden;
+      white-space: nowrap;
     }
   }
 
@@ -131,9 +132,10 @@ h2 {
     }
   }
 
+  /*animation du checker*/
   &:hover {
     & .plate {
-      &__text {
+      &__price {
         animation-name: anim-text;
         animation-duration: 1000ms;
         animation-delay: 150ms;
@@ -188,26 +190,6 @@ h2 {
     animation-fill-mode: forwards;
 
     animation-delay: 1800ms;
-    transform: translateY(0px);
-  }
-}
-
-@keyframes anim-menu {
-  0% {
-    opacity: 0;
-    transform: translateY(-60px);
-  }
-
-  35% {
-    opacity: 0;
-  }
-
-  90% {
-    transform: translateY(10px);
-  }
-
-  100% {
-    opacity: 1;
     transform: translateY(0px);
   }
 }

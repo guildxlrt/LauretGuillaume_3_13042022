@@ -7,17 +7,8 @@
 /* Plate variables*/
 /*Loader spin*/
 /* Carte de presentation*/
-/*Width du block du ckecker du Menu Plate*/
-@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
-@keyframes anim-text {
-  from {
-    width: 70%;
-  }
-  to {
-    width: 50%;
-  }
-}
 /* animation du coeur */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 @keyframes heart-grow {
   0% {
     transform: scale(0);
@@ -60,6 +51,32 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+/* animation du menu */
+@keyframes anim-menu {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+  35% {
+    opacity: 0;
+  }
+  90% {
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+/*Width du text du ckecker du Menu Plate*/
+@keyframes anim-text {
+  from {
+    margin-right: 0px;
+  }
+  to {
+    margin-right: 70px;
   }
 }
 /* MIXINS*/
@@ -71,15 +88,6 @@
 /* Plate variables*/
 /*Loader spin*/
 /* Carte de presentation*/
-/*Width du block du ckecker du Menu Plate*/
-@keyframes anim-text {
-  from {
-    width: 70%;
-  }
-  to {
-    width: 50%;
-  }
-}
 /* animation du coeur */
 @keyframes heart-grow {
   0% {
@@ -123,6 +131,32 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+/* animation du menu */
+@keyframes anim-menu {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+  35% {
+    opacity: 0;
+  }
+  90% {
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+/*Width du text du ckecker du Menu Plate*/
+@keyframes anim-text {
+  from {
+    margin-right: 0px;
+  }
+  to {
+    margin-right: 70px;
   }
 }
 /* Buttons */
@@ -171,15 +205,6 @@
 /* Plate variables*/
 /*Loader spin*/
 /* Carte de presentation*/
-/*Width du block du ckecker du Menu Plate*/
-@keyframes anim-text {
-  from {
-    width: 70%;
-  }
-  to {
-    width: 50%;
-  }
-}
 /* animation du coeur */
 @keyframes heart-grow {
   0% {
@@ -223,6 +248,32 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+/* animation du menu */
+@keyframes anim-menu {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+  35% {
+    opacity: 0;
+  }
+  90% {
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+/*Width du text du ckecker du Menu Plate*/
+@keyframes anim-text {
+  from {
+    margin-right: 0px;
+  }
+  to {
+    margin-right: 70px;
   }
 }
 /* Coeur */
@@ -460,6 +511,7 @@ h2 {
   box-shadow: 0px 3px 10px #858585;
   position: relative;
   overflow: hidden;
+  /*animation du checker*/
 }
 .plate__text {
   /*flex*/
@@ -474,11 +526,12 @@ h2 {
   z-index: 1;
 }
 .plate__text--lines {
-  display: flex;
+  display: inline;
   margin: 0px;
   max-height: 21px;
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
 }
 .plate__price {
   padding: 0px 20px 0px 20px;
@@ -509,7 +562,7 @@ h2 {
 .plate__check--icon {
   transition: transform 1000ms ease-in-out;
 }
-.plate:hover .plate__text {
+.plate:hover .plate__price {
   animation-name: anim-text;
   animation-duration: 1000ms;
   animation-delay: 150ms;
@@ -559,22 +612,6 @@ h2 {
   transform: translateY(0px);
 }
 
-@keyframes anim-menu {
-  0% {
-    opacity: 0;
-    transform: translateY(-60px);
-  }
-  35% {
-    opacity: 0;
-  }
-  90% {
-    transform: translateY(10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
 /* RESPONSIVE*/
 @media all and (min-width: 768px) {
   .title__text {
