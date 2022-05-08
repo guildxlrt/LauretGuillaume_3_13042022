@@ -1,13 +1,14 @@
+/*ELEMENT : Plat */
+
 @import "../base/style.scss";
 
-/* Carte d'un plat */
 .dish {
-  /* flex */
+  /* flex parameters */
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  /* form parameters */
+  /* bloc parameters */
   width: 100%;
   height: $plate_height;
   margin-top: $plate_margin;
@@ -20,83 +21,82 @@
   @include back-light;
   @include shadow;
 
+  /* Bloc du Texte */
   &__text {
-    /*flex*/
+    /*flex parameters*/
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    /* form parameters */
+    /* bloc parameters */
     width: 100%;
     height: 100%;
     padding: 0%;
     margin: 0 auto;
 
-    &--blank {
-      width: 0px;
-    }
     &--line {
+      /* bloc parameters */
       line-height: 21px;
       max-height: 21px;
       margin: 0px 60px 0px 5%;
       width: auto;
-
+      /* text properties */
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
+      /* animation*/
+      transition: margin-right 1000ms ease-in-out;
     }
   }
 
+  /* Bloc du Prix */
   &__price {
-    /*position*/
-    position: absolute;
-    right: -60px;
-    /* flex */
+    /* flex parameters */
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
+    /*position*/
+    position: absolute;
+    right: -60px;
     /* animation*/
     transition: transform 1000ms ease-in-out;
 
     &--numb {
+      /* bloc */
       padding: 0px 15px 0px 15px;
       width: 30px;
     }
     &--check {
-      /* flex */
+      /* flex parameters */
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      /* colors */
-      @include tertiary-bg-color;
-      color: white;
-      /* form parameters */
+      /* bloc parameters */
       font-size: 20px;
       padding: 0px 20px 0px 20px;
       height: $plate_height;
       width: 20px;
+      /* colors */
+      @include tertiary-bg-color;
+      color: $light-grey;
+
       &--icon {
-        transition: transform 1000ms ease-in-out;
+        transition: transform 1000ms ease-in-out; /* animation*/
       }
     }
   }
 
-  /*animation*/
+  /* ANIMATION */
   &:hover {
     & .dish {
       &__text--line {
-        animation-name: anim-text;
-        animation-duration: 1000ms;
-        animation-delay: 150ms;
-        animation-timing-function: ease-in-out;
-        animation-direction: alternate;
-        animation-fill-mode: forwards;
+        margin-right: 120px; /* bloc parameters */
       }
       &__price {
-        transform: translateX(-60px);
+        transform: translateX(-60px); /* animation */
         &--check--icon {
-          transform: rotate(-360deg);
+          transform: rotate(-360deg); /* animation */
         }
       }
     }

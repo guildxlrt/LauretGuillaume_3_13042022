@@ -1,79 +1,83 @@
+/*PAGE D'ACCEUIL*/
+
 @import "../base/style.scss";
 @import "../components/_loader.scss";
 
-.centered_column {
-  /* Center & columning */
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-/* flexbox de la section principale*/
+/* FLEXBOX de la Secion Principale*/
 
 #localiser {
-  @include back-dark;
+  @include back-dark; /* color */
 }
 
 #presentation {
-  @include back-grey;
-  justify-content: flex-start;
+  @include back-grey; /* color */
+  justify-content: flex-start; /* flex */
 }
 
 #guide {
-  @include back-light;
-  padding: 5%;
+  @include back-light; /* color */
+  padding: 5%; /* bloc */
 }
 
 #restaurants {
-  @include back-grey;
-  padding: 5%;
+  @include back-grey; /* color */
+  padding: 5%; /* bloc */
 }
 
 #localiser,
 #presentation {
-  @extend .centered_column;
+  @include centered_column; /* Centrer et aligner verticalement les blocs */
 }
 
-/* Localisateur */
+/* LOCALISATEUR */
 
 .localiser--button {
+  /* text */
   font-size: 18px;
   font-weight: bold;
+  /* color */
   @include back-dark;
+  /* bloc */
   padding: 20px;
 }
 
-/* Presentation */
+/* PRESENTATION */
 
 .presentation {
   &--title {
+    /* bloc */
     width: fit-content;
     max-width: 60%;
+    /* text */
     text-align: center;
   }
   &--text {
+    /* bloc */
     width: fit-content;
     max-width: 80%;
+    /* text */
     text-align: center;
   }
 }
 
-/* Guide de fonctionnement*/
+/* GUIDE */
 
 .guide__list {
-  margin: 0%;
-  @extend .centered_column;
+  @include centered_column; /* Centrer et aligner verticalement les blocs */
+  margin: 0%; /* bloc */
 }
 
 .bull {
+  /* bloc parameters */
   width: 95%;
   max-width: 320px;
-  @include back-grey;
   border-radius: 23px;
   margin: 15px 0px 15px 0px;
+  /* colors parameters */
+  @include back-grey;
   box-shadow: 0px 5px 10px #858585;
 
+  /* Color transform */
   &:hover {
     background-color: lighten($grey, 2);
     box-shadow: 0px 5px 10px darken(#858585, 10);
@@ -84,19 +88,24 @@
   }
 
   &--numb {
+    /* bloc parameters */
     padding: 10px 13px 10px 13px;
     border-radius: 50px;
+    /* colors parameters */
     @include numb-bg-color;
     color: $light-grey;
+    /* text parameters */
     font-size: 10px;
     font-weight: bold;
+    /* position */
     position: relative;
     left: -15px;
   }
   &--icon {
-    margin: 30px 6% 30px 0px;
+    margin: 30px 6% 30px 0px; /*bloc*/
   }
   &--text {
+    /*bloc*/
     width: fit-content;
     max-width: 200px;
   }
@@ -105,35 +114,49 @@
 /* PRESENTATIONS DES RESTAURANTS */
 
 .stores_list {
-  min-height: 100px;
+  /* flex parameters */
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* flex parameters */
+  min-height: 100px;
 }
 
-/* Carte de presentation*/
+/* CARTE - Etablissement */
 .card {
+  /* colors parameters */
   @include back-light;
+  @include shadow;
+  /* bloc parameters */
   border-radius: $card-border;
   margin: 3%;
   width: 100%;
-  @include shadow;
+
+  /* Color transform */
+  &:hover {
+    box-shadow: 0px 5px 10px darken(#858585, 20);
+  }
 
   &__img {
+    /* image parameters */
+    object-fit: cover;
+    /* bloc parameters */
     width: 100%;
     height: 200px;
-    object-fit: cover;
     border-radius: $card-border $card-border 0px 0px;
   }
   &__text {
-    padding: 2% 5% 3% 5%;
+    /* flex parameters */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    /* bloc parameters */
+    padding: 2% 5% 3% 5%;
   }
 }
 
+/* PSEUDO-ELEMENTS */
 h3 {
   margin: 0px;
 }
@@ -150,53 +173,61 @@ h3 {
   }
 
   .guide__list {
+    /* flex parameters */
     flex-direction: row;
     justify-content: space-evenly;
-
+    /* bloc parameters */
     margin-top: 50px;
   }
 
   .bull {
+    /* flex parameters */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-
+    /* bloc parameters */
     height: 150px;
     width: auto;
 
     &--numb {
+      /* flex parameters */
+      width: fit-content;
+      padding-left: 15px;
+      padding-right: 15px;
+      /* text parameters */
+      font-size: 18px;
+      /* position */
       position: relative;
       left: 0%;
       top: -16px;
-      width: fit-content;
-      font-size: 18px;
-      padding-left: 15px;
-      padding-right: 15px;
       z-index: 1;
     }
     &--icon {
-      margin: 0px 0px 0px 0px;
-      font-size: 30px;
+      margin: 0px 0px 0px 0px; /* bloc */
+      font-size: 30px; /* position */
     }
     &--text {
+      /* bloc parameters */
       width: 205px;
       max-width: 90%;
-      font-size: 20px;
-      text-align: center;
       margin-top: 10%;
       margin-bottom: 10%;
+      /* text parameters */
+      font-size: 20px;
+      text-align: center;
     }
   }
 
   /* Titres de la page */
 
   .page_titles {
-    text-align: center;
+    text-align: center; /*text*/
   }
 
   #guide,
   #restaurants {
+    /* flex parameters */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -204,51 +235,54 @@ h3 {
 
   .guide__list,
   .stores_list {
-    width: 100%;
+    width: 100%; /* bloc*/
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 991px) {
   .stores_list {
+    /* flex parameters */
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
 
   .card {
+    /* bloc parameters */
     height: 100%;
     width: 330px;
     margin-left: 0px;
     margin-right: 0px;
 
     &__img {
-      width: 100%;
+      width: 100%; /* bloc*/
     }
   }
 }
 
 @media all and (min-width: 992px) {
   .guide__list {
-    max-width: 1200px;
+    max-width: 1200px; /* bloc*/
   }
 
   .bull {
-    width: 250px;
+    width: 250px; /* bloc*/
     &--text {
-      max-width: 200px;
+      max-width: 200px; /* bloc*/
     }
   }
 
   .stores_list {
+    /* flex parameters */
     flex-direction: row;
     justify-content: space-between;
   }
 
   .card {
-    margin: 1%;
+    margin: 1%; /* bloc*/
 
     &__img {
-      width: 100%;
+      width: 100%; /* bloc*/
     }
   }
 }

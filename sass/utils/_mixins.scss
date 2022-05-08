@@ -41,3 +41,12 @@
 @mixin loader-text-shadow {
   text-shadow: 0px 5px 10px #929292;
 }
+
+/* Centrer et aligner verticalement les blocs */
+@mixin centered_column {
+  /*flex parameters*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

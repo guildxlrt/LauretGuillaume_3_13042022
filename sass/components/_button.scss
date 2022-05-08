@@ -1,25 +1,28 @@
+/*ELEMENT : Boutton */
+
 @import "../utils/_mixins.scss";
 @import "../utils/_var.scss";
 @import "../utils/_keyframes.scss";
 
-/* Buttons */
-
 .btn {
+  /*color parameters*/
   background: linear-gradient(
     to right bottom,
     $secondary-color,
     $primary-color
   );
   box-shadow: 0px 5px 10px #858585;
+  @include back-light;
+  color: $light-grey;
+  /* text parameters */
   list-style-type: none;
+  font-weight: bold;
+  font-size: 17px;
+  /*bloc parameters*/
   padding: 20px;
   margin: 20px 20px 55px 20px;
   border-radius: 60px;
-  @include back-light;
-  font-weight: bold;
-  font-size: 17px;
-  color: $light-grey;
-
+  /*position*/
   position: relative;
   z-index: 1;
 
@@ -30,14 +33,14 @@
   }
 
   &::after {
-    /*color modification*/
+    content: ""; /* contenu de l'after*/
+    /*colors parameters*/
     background: linear-gradient(
       to right bottom,
       lighten($color: $secondary-color, $amount: 3),
       lighten($color: $primary-color, $amount: 3)
     );
     box-shadow: 0px 5px 10px darken(#858585, 30);
-
     color: darken($light-grey, 3);
     /*position*/
     position: absolute;
@@ -46,10 +49,10 @@
     right: 0;
     left: 0;
     z-index: -1;
-    /*presets*/
-    content: "";
-    opacity: 0;
+    /*bloc parameters*/
     border-radius: 60px;
+    /*animation presets*/
+    opacity: 0;
     transition: opacity 250ms;
   }
 }
