@@ -1,4 +1,5 @@
 /*PAGE GENERATRICE DES MENUS*/
+/* STYLE PAR DEFAULT */
 /* MIXINS*/
 /*couleurs de fond de page*/
 /*couleur principales utilisees en fond d'element*/
@@ -150,7 +151,6 @@
     transform: translateY(0px);
   }
 }
-/* Button */
 .btn {
   /*color parameters*/
   background: linear-gradient(to right bottom, #ff79da, #9356dc);
@@ -552,6 +552,7 @@ h1 {
 
 /* CARTE - Plat */
 /*ELEMENT : Plat */
+/* STYLE PAR DEFAULT */
 /* MIXINS*/
 /*couleurs de fond de page*/
 /*couleur principales utilisees en fond d'element*/
@@ -701,7 +702,6 @@ h1 {
     transform: translateY(0px);
   }
 }
-/* Button */
 .btn {
   /*color parameters*/
   background: linear-gradient(to right bottom, #ff79da, #9356dc);
@@ -1026,7 +1026,6 @@ h1 {
     width: fit-content;
   }
 }
-/* CARTE */
 .dish {
   /* flex parameters */
   display: flex;

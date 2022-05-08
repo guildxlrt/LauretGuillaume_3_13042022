@@ -1,4 +1,5 @@
 /*PAGE D'ACCEUIL*/
+/* STYLE PAR DEFAULT */
 /* MIXINS*/
 /*couleurs de fond de page*/
 /*couleur principales utilisees en fond d'element*/
@@ -149,7 +150,6 @@
     transform: translateY(0px);
   }
 }
-/* Button */
 .btn {
   /*color parameters*/
   background: linear-gradient(to right bottom, #ff79da, #9356dc);
@@ -549,7 +549,7 @@ h1 {
     transform: translateY(0px);
   }
 }
-/*loader screen*/
+/*SCREEN*/
 .loader {
   /*colors */
   background-color: #eaeaea;
@@ -568,7 +568,7 @@ h1 {
   animation-fill-mode: forwards;
 }
 
-/*loader spin*/
+/*SPINNER*/
 .spinner {
   /*flex parameters*/
   display: flex;
