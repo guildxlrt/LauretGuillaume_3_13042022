@@ -187,7 +187,7 @@ h3 {
     align-items: center;
     justify-content: space-evenly;
     /* bloc parameters */
-    height: 150px;
+    height: 130px;
     width: auto;
 
     &--numb {
@@ -200,12 +200,12 @@ h3 {
       /* position */
       position: relative;
       left: 0%;
-      top: -16px;
+      top: -20px;
       z-index: 1;
     }
     &--icon {
       margin: 0px 0px 0px 0px; /* bloc */
-      font-size: 30px; /* position */
+      font-size: 25px; /* position */
     }
     &--text {
       /* bloc parameters */
@@ -214,7 +214,6 @@ h3 {
       margin-top: 10%;
       margin-bottom: 10%;
       /* text parameters */
-      font-size: 20px;
       text-align: center;
     }
   }
@@ -240,6 +239,12 @@ h3 {
 }
 
 @media all and (min-width: 768px) and (max-width: 991px) {
+  .bull {
+    &--text {
+      font-size: 16px; /* text*/
+    }
+  }
+
   .stores_list {
     /* flex parameters */
     flex-direction: row;
@@ -266,9 +271,10 @@ h3 {
   }
 
   .bull {
-    width: 250px; /* bloc*/
+    width: 230px; /* bloc*/
     &--text {
       max-width: 200px; /* bloc*/
+      font-size: 18px; /* text*/
     }
   }
 
