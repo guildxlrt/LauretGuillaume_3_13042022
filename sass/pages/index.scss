@@ -132,6 +132,7 @@
   border-radius: $card-border;
   margin: 3%;
   width: 100%;
+  max-width: 500px;
 
   /* Color transform */
   &:hover {
@@ -146,7 +147,7 @@
     height: 200px;
     border-radius: $card-border $card-border 0px 0px;
   }
-  &__text {
+  &__descr {
     /* flex parameters */
     display: flex;
     flex-direction: row;
@@ -154,6 +155,10 @@
     align-items: center;
     /* bloc parameters */
     padding: 2% 5% 3% 5%;
+
+    &--text {
+      width: 100%;
+    }
   }
 }
 
