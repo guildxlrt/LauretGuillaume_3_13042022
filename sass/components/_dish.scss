@@ -65,6 +65,10 @@
       /* bloc */
       padding: 0px 15px 0px 15px;
       width: 30px;
+      position: relative;
+      bottom: -16px;
+      font-weight: bold;
+      font-size: 14px;
     }
     &--check {
       /* flex parameters */
